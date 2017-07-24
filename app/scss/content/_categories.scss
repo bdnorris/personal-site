@@ -1,0 +1,148 @@
+.categories-wrapper {
+  padding: 0; // no margins on mobile
+  ul {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+  }
+  @include breakpoint(medium) {
+    padding: 0 32px; // back to normal
+    @include clearfix;
+  }
+  @include breakpoint(large up) {
+    padding: 0 15px; // back to normal
+  }
+}
+
+.category-lockup {
+  margin-top:    1em;
+  margin-bottom: 4em;
+  display: block;
+  @include breakpoint(medium up) {
+    margin-left:   15px;
+    margin-right:  15px;
+    margin-top:    2em;
+    margin-bottom: 2em;
+    width: calc(50% - 30px);
+    float: left;
+  }
+  @include breakpoint(large up) {
+    margin-top:    4em;
+    margin-bottom: 4em;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+  }
+  a:hover {
+    .category-lockup__text {
+      z-index: 0;
+      @include breakpoint(large up) {
+        h2 {
+          color: white;
+          &::before {
+            right: 0;
+            width: 91%;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.category-lockup__image {
+  transform: scale(0.8);
+  transition: transform 1s ease;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply; // eh
+    z-index: 1;
+    position: relative;
+  }
+  &.in-view {
+    transform: scale(1);
+  }
+}
+
+.category-lockup__text {
+  position: relative;
+  // padding-bottom: 0.666em;
+  background-color: $gray-1;
+  padding-bottom: 2em;
+  z-index: 0;
+  h2 {
+    display: block;
+    // margin-bottom: 0.6em;
+    margin: 0;
+    color: $orange;
+    padding: 18px 18px 0.2em 18px;
+    // little orange thingies
+    &::after {
+      content: '';
+      width:  4px;
+      height: 30px;
+      display: inline-block;
+      background-color: rgba($orange, 0.85);
+      background-blend-mode: multiply;
+      position: absolute;
+      right: 1em;
+      top:  -0.666em;
+    }
+  }
+  @include breakpoint(medium) {
+    h2 {
+      &::after {
+        top: -0.44em;
+      }
+    }
+  }
+  @include breakpoint(large up) {
+    padding-bottom: 0;
+    h2 {
+      padding: 1.1em 18px 0.2em 18px;
+      @include shift(up, 0.8em);
+      transition: color 0.5s ease;
+      height: 112px;
+      &::before {
+        transition: all 0.6s ease;
+        content: '';
+        display: inline-block;
+        width: 7px;
+        position: absolute;
+        left:   0;
+        top:    0;
+        bottom: 0;
+        background-color: $orange;
+        mix-blend-mode: multiply; // eh
+        z-index: -1;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  p {
+    padding-left:  18px;
+    padding-right: 18px;
+    @include breakpoint(large up) {
+      // padding-bottom: 1.2em;
+      padding-bottom: 1em;
+      margin-bottom:  1em;
+      margin-top:     1em;
+      // position: relative;
+      // top: -2em;
+    }
+  }
+  // position of button, not style.
+  // OOCSS Like
+  button.button {
+    left: 18px;
+    @include breakpoint(large up) {
+      left:  auto;
+      right: 9%;
+    }
+  }
+}

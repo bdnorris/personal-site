@@ -1,0 +1,53 @@
+// GLOBAL type settings, including Headings, Links, Paragraphs, etc.
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $text;
+}
+
+h1 {
+  font-size:   24px;
+  line-height: 1.185; // unit-less line-height to keep it flexible
+  font-weight: 400; // Roman/Regular
+  margin: 0 0 0.8rem 0; // 1rem for 16pt
+  @include breakpoint(medium) {
+    font-size: 48px;
+  }
+  @include breakpoint(large up) {
+    font-size: 70px;
+  }
+}
+
+h2 {
+  font-size:   24px;
+  line-height: 1.185;
+  font-weight: 400; // Roman/Regular
+  margin: 0.333em 0;
+  @include breakpoint(medium) {
+    font-size: 36px;
+  }
+  @include breakpoint(large up) {
+    font-size: 48px;
+  }
+}
+
+p {
+  margin: 0 0 1em 0;
+  font-weight: 300; // light
+  font-size:   14px;
+  line-height: 1.5;
+  @include breakpoint(medium) {
+    font-size: 16px;
+  }
+  @include breakpoint(large up) {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover, &:focus {
+    color: darken($blue, 15%);
+  }
+}

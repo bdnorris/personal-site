@@ -1,0 +1,240 @@
+// GLOBAL Navigation
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        padding-bottom: 6px;
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Totally seperate markup for mobile and desktop navigation
+
+nav.nav--mobile {
+  float: right;
+  .nav--overlay {
+    z-index: 3;
+    background-color: rgba($dblue, 0.95);
+    height: 100vh;
+    width: calc(100vw - (100vw - 100%)); // trick to use 100vw and not trigger horizontal scrollbars
+    top:  0;
+    left: 0;
+    position: fixed;
+    display: none;
+    &.alive {
+      animation: fadeOutRight 400ms ease;
+      display: flex;
+      // visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.active {
+      opacity: 1;
+      display: flex;
+      pointer-events: all;
+      animation: fadeInRight 700ms ease;
+    }
+    // display: flex;
+    flex-direction: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    ul {
+      flex: 0 0 auto;
+      padding-left: 2.5em;
+      li {
+        margin-bottom: 2.2em;
+        a {
+          display: inline-block;
+          // line-height: 0.75;
+          position: relative;
+          &::after {
+            content: '';
+            display: inline-block;
+            background-color: $blue;
+            height: 3px;
+            width:  0;
+            position: absolute;
+            left:   0;
+            bottom: 3px;
+            transition: width 500ms ease;
+          }
+          &.active, &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+      // .avatar is module, but here I'm setting it's position for this context
+      li.avatar {
+        position: absolute;
+        bottom: 1.5em;
+        margin-bottom: 0;
+        left: 1.5em;
+        // position: relative;
+      }
+    }
+    @include breakpoint(medium up) {
+      display: none !important; // BECAUSE WE REALLY NEVER WANT THIS ON DESKTOP
+    }
+  } // nav overlay
+}
+
+nav.nav--desktop {
+  display: none;
+  // float: right;
+  // flex properties in header.scss
+  background-color: transparent;
+  ul {
+    li {
+      display: inline-block;
+    }
+  }
+  @include breakpoint(medium) {
+    height: 72px;
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left:  1.5em;
+    top:   1em;
+    right: 1.5em;
+    ul {
+      padding-top: 1em;
+      position: relative;
+      li {
+        margin: 0 1.5em;
+        a {
+          transition: position 1s ease;
+          // display: inline-block;
+          #indicator &.active {
+            left: 0;
+          }
+        }
+      }
+      li.last {
+        margin-right: 0;
+      }
+
+      // &.active, &:hover {
+      #indicator {
+        display: inline-block;
+        width:  100px;
+        height: 3px;
+        background-color: $dblue;
+        position: absolute;
+        bottom: -2px;
+        left:   -9999px;
+        margin:  0;
+        padding: 0;
+        transition: left 700ms ease, width 700ms ease;
+      }
+    }
+  }
+  @include breakpoint(large up) {
+    // flex: none;
+    display: block;
+    height: 128px;
+    position: static;
+    padding-left: 2em;
+    padding-top:  0.5em;
+    .avatar {
+      vertical-align: top;
+      margin-right: 1em;
+    }
+    ul {
+      display: inline-block;
+      // padding-top: 0;
+      li {
+        margin: 0 2em;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// seperate, because it might actually be re-usable
+button.hamburger {
+  display: block;
+  font-size: 11px;
+  color: $orange;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 0;
+  margin-bottom: 0.5em;
+  top:   1em;
+  right: 1.5em;
+  position: absolute;
+  .hamburger-container {
+    padding-top: 9px;
+    width:  33px;
+    height: 33px;
+    overflow: hidden;
+    div {
+      height: 3px;
+      background-color: $blue;
+      margin-bottom: 5px;
+      transform-origin: center;
+      &.forx {
+        transition: transform 0.5s ease;
+      }
+      &.line {
+        transition: transform 0.25s ease;
+      }
+      &#line-3, &#line-4 {
+        position: relative;
+        top: -8px;
+      }
+    }
+  } // .hamburger-container
+  span {
+    position: relative;
+    // top: -16px;
+  }
+  span.menu {
+    display: block;
+  }
+  span.close {
+    display: none;
+  }
+  &.active {
+    z-index: 4;
+    position: fixed;
+    // right: calc(1em + 15px); // 15px is the wrapper padding
+
+    div {
+      &.forx#line-2 {
+        transform-origin: center;
+        transform: rotate(45deg);
+      }
+      &.forx#line-3 {
+        transform-origin: center;
+        transform: rotate(-45deg);
+      }
+      &.line#line-1 {
+        transform: translateX(100px);
+      }
+      &.line#line-4 {
+        transform: translateX(-100px);
+      }
+    }
+
+    span.menu  { display: none; }
+    span.close { display: block; }
+  }
+  @include breakpoint(medium up) {
+    display: none;
+  }
+}

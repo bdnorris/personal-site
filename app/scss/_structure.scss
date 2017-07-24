@@ -1,0 +1,24 @@
+// The closest thing I have to a grid. Essentially, default band-based layout
+
+// Sections define bands, inner-wrapper as a class on a DIV defines max-width and padding
+.inner-wrapper {
+  width: 100%;
+  padding: 0 15px;
+  @include breakpoint(medium) {
+    padding: 0 32px;
+  }
+  @include breakpoint(large up) {
+    max-width: 1258px;
+    margin: 0 auto;
+  }
+}
+
+// For any page that would have vertically and horizontally centered content, like the sign in page
+.stage {
+  height: 100vh;
+  width:  100vw;
+  padding: 15px;
+  @include breakpoint(medium up) {
+    padding: 32px;
+  }
+}

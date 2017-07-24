@@ -1,0 +1,70 @@
+.content-lockup--small {
+  padding-top:    22px;
+  padding-right:  0;
+  padding-bottom: 53px;
+  padding-left:   2px;
+  margin-right:  -15px;
+  @include breakpoint(medium up) {
+    padding-top:    46px;
+    padding-right:  0;
+    padding-bottom: 46px;
+    padding-left:   0;
+    margin-right:   0;
+  }
+  @include breakpoint(large up) {
+    padding-top:    74px;
+    padding-bottom: 74px;
+  }
+}
+
+.content-lockup__image--small {
+  @include breakpoint(medium) {
+    width: 46%;
+  }
+  @include breakpoint(large up) {
+    width: 34%;
+  }
+}
+
+.content-lockup__text--small {
+  background-color: rgba(#ADADAD, 0.15);
+  position: relative;
+  padding: 4em 2em 2.4em 1em;
+  margin-top: -4em;
+  margin-left: 26px;
+  transform: scale(0.8);
+  transition: transform 1s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    width:  5px;
+    height: 38px;
+    background-color: $orange;
+    top:  2.8em;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+  h2 {
+    color: $orange;
+    margin-top: 0.666em;
+  }
+  @include breakpoint(medium up) {
+    margin-left: 33%;
+    margin-top: -20%;
+    padding: 2em 1em 2.4em 16%;
+    &::before {
+      top: 54%;
+    }
+  }
+  @include breakpoint(large up) {
+    margin-left: 25%;
+    margin-top: -16%;
+    padding: 2em 2em 2.4em 11%;
+    &::before {
+      top: 72%;
+    }
+  }
+  &.in-view {
+    transform: scale(1);
+  }
+}
