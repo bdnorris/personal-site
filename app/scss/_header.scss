@@ -1,104 +1,57 @@
 // GLOBAL Header specific
 
-header {
-  background: $teal url(../images/header_bg.png) no-repeat center top;
-  background-size: cover;
-  position: relative;
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  .inner-wrapper {
-    height: 454px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    @include breakpoint(medium) {
-      height: 634px;
-      padding: 0 64px;
-    }
-    @include breakpoint(large up) {
-      max-width: 1260px + 32px + 32px;
-      height: 562px;
-    }
+$anim-height: 1.2em;
+$anim-width: 4.5em;
+header.masthead {
+  background-color: gray;
+  h2 {
+    font-size: 2em;
+    height: $anim-height;
   }
-}
-
-.masthead {
-  flex: 0 0 auto;
-  padding-top: 1em;
-  a.identity {
-    flex: 0 0 auto;
-    display: block;
+  dl {
+    display: inline-block;
+    position: relative;
+    height: $anim-height;
+    top: 1.25em;
+    // left: 0;
+    // width: $anim-width;
+    margin-top: -1.5em;
+    // background-color: teal;
+    animation: flip-horizontal-bottom 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate forwards;
+    transform-style: preserve-3d;
+  }
+  dt {
+    transform: translate3d(0,0,0);
+    transform-style: preserve-3d;
+    background-color: aqua;
     position: absolute;
-    top: 1em;
-    left: 1em;
-    // left: calc(1em - 15px);
-    svg {
-      // height: auto; DOESN'T WORK IN WEBKIT (THE NEW IE)
-      @include responsive-svg(117px, 179px, 112px);
-      @include breakpoint(medium) {
-        @include responsive-svg(117px, 179px, 179px);
-      }
-      @include breakpoint(large up) {
-        @include responsive-svg(117px, 179px, 238px);
-      }
-    }
-    // Proof of concept, logo color schemes in CSS
-    svg .primary {
-      fill: $blue;
-    }
-    svg .secondary {
-      fill: $orange;
-    }
-    &.active {
-      position: fixed;
-      z-index: 4;
-      left: 1em;
-    }
-  } // identity
-  @include breakpoint(medium) {
-    padding-top: calc(4em + 72px); // 72px is the height of the absolutely positioned nav for medium
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    a.identity {
-      position: static;
-      order: 2;
-    }
-    nav.nav--desktop {
-      flex: 1 0 auto;
-      text-align: right;
-      order: 1;
-    }
-  }
-  @include breakpoint(large up) {
-    padding-top: 2em;
-    flex-flow: row nowrap;
-    a.identity { order: 1; }
-    nav.nav--desktop { order: 2; }
-  }
-}
+    backface-visibility: hidden;
+    top: 0;
+    display: block;
+    height: $anim-height;
+    overflow: hidden;
+    // width: $anim-width;
 
-
-.header-copy {
-  flex: 0 0 auto;
-  padding-bottom: 1.666em;
-  h1 {
-    color: #FFFFFF;
-    letter-spacing: 2px;
-  }
-  p {
-    color: $orange;
-    line-height: 1.4;
-  }
-  @include breakpoint(medium) {
-    p {
-      font-size: 18px;
-    }
-  }
-  @include breakpoint(large up) {
-    max-width: 62%;
-    h1 {
-      font-size: 65px; // font-size deviates from base h1 in header on desktop only
+    &:last-child {
+      background-color: pink;
+      transform: rotateX(180deg);
+      backface-visibility: hidden;
+      display: block;
+      top: 0;
+      height: $anim-height;
+      overflow: hidden;
+      // top: -0.2em
+      // position: absolute;
+      // top: 0;
+      // top: 1em;
+      // animation-name: fadeInOut;
+      // animation-delay: 0;
+      // animation-direction: normal;
+      // animation-duration: 2s;
+      // animation-fill-mode: forwards;
+      // animation-iteration-count: infinite;
+      // animation-timing-function: ease;
+      // animation-play-state: running;
     }
   }
 }
