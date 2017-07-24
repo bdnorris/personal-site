@@ -1,0 +1,206 @@
+/* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
+THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
+*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* END BOX MODEL SETTINGS */
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden; }
+
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%; }
+
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%; }
+
+.intrinsic-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
+  color: #343741;
+  margin: 0;
+  padding: 0; }
+
+p {
+  color: #343741; }
+
+a {
+  color: #b7006a;
+  transition: color 0.5s ease; }
+  a:hover {
+    color: #980058; }
+
+button, a.button {
+  box-sizing: border-box;
+  border: none;
+  display: block;
+  font-size: 0.875em;
+  background-color: #b7006a;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  line-height: 1.2em;
+  max-width: 300px; }
+  button:hover, a.button:hover {
+    background-color: #980058; }
+
+button.download span::before, a.button.download span::before {
+  content: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214.9%22%20height%3D%2213.7%22%20viewBox%3D%220%200%2014.9%2013.7%22%3E%3Cstyle%3E.st0%7Bfill%3A%23fff%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20style%3D%22fill%3A%23fff%22%20d%3D%22M14.9%2010v2.9c0%20.2-.1.4-.2.6-.2.2-.4.2-.6.2H.9c-.2%200-.4-.1-.6-.2s-.3-.4-.3-.6V10c0-.2.1-.4.2-.6s.4-.2.6-.2H5l1.2%201.2c.3.3.8.5%201.2.5.5%200%20.9-.2%201.2-.5l1.2-1.2H14c.2%200%20.4.1.6.2.2.2.3.4.3.6zM12%204.9c.1.2.1.5-.1.6l-4%204c-.2.2-.3.2-.5.2-.1%200-.3%200-.4-.2l-4-4c-.2-.1-.2-.3-.1-.6.1-.2.3-.3.5-.3h2.3v-4c0-.2.1-.3.2-.4s.2-.2.4-.2h2.3c.1%200%20.3.1.4.2.1.1.2.2.2.4v4h2.3c.2%200%20.4.1.5.3zm-.7%207.5c.1-.1.2-.2.2-.4s-.1-.3-.2-.4c-.1-.1-.2-.2-.4-.2s-.3.1-.4.2c-.1.1-.2.2-.2.4s.1.3.2.4.2.2.4.2c.1%200%20.2-.1.4-.2zm2.2%200c.1-.1.2-.2.2-.4s-.1-.3-.2-.4c-.1-.1-.2-.2-.4-.2s-.3.1-.4.2c-.1.1-.2.2-.2.4s.1.3.2.4.2.2.4.2.3-.1.4-.2z%22%2F%3E%3C%2Fsvg%3E%0A");
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  margin-right: 0.75em;
+  position: relative;
+  top: 1px; }
+
+header.header {
+  background-color: white; }
+
+nav {
+  text-align: center;
+  background-color: white; }
+
+body {
+  background: white; }
+
+section {
+  padding: 2.25em; }
+
+section.content {
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.75em 2.25em 2.25em 2.25em; }
+  section.content h1 {
+    margin: 2.75rem 0 0 0; }
+
+div.section-wrapper {
+  max-width: 828px;
+  margin: 0 auto; }
+
+section.contact-form {
+  background-color: #eff4c1; }
+
+label {
+  display: block;
+  margin: 0.8125em 0 0.4em 0;
+  font-size: 0.9375em;
+  line-height: 1.2em; }
+
+input[type='text'], input[type='email'], textarea {
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  margin: 0 0 0.8125em 0;
+  line-height: 1em;
+  display: block;
+  padding: 0.5em;
+  font-family: "Open Sans", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1rem; }
+
+input[type='text'], input[type='email'] {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  vertical-align: baseline;
+  line-height: 1.333em; }
+
+textarea {
+  width: 100%;
+  height: 12.2rem; }
+
+.checkbox-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1em 0.333em 0 0; }
+
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"] + label {
+  background-color: white;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  height: 1.875em;
+  width: 1.875em;
+  margin: 0;
+  -ms-flex: 0 0 1.875em;
+  flex: 0 0 1.875em; }
+
+input[type="checkbox"]:checked + label {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213.8%22%20height%3D%2210.6%22%20viewBox%3D%220%200%2013.8%2010.6%22%3E%3Cstyle%3E.st0%7Bfill%3A%23b7006a%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20style%3D%22fill%3A%23b7006a%22%20d%3D%22M13.8%202.1c0%20.2-.1.4-.2.6L7.1%209.1l-1.2%201.2c-.2.2-.4.2-.6.2s-.4-.1-.6-.2L3.5%209.1.2%205.9c-.1-.2-.2-.4-.2-.6s.1-.4.2-.6l1.2-1.2c.2-.2.4-.2.6-.2s.4.1.6.2l2.6%202.6L11.1.2c.2-.1.4-.2.7-.2s.4.1.6.2l1.2%201.2c.2.2.2.4.2.7z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 13.8px 10.6px; }
+
+span.checkbox-label {
+  display: inline-block;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-left: 0.666em;
+  font-size: 0.9375em;
+  line-height: 1.2em; }
+
+/* .invalid class prevents CSS from automatically applying */
+.invalid input:required:invalid {
+  border-color: #b7006a; }
+
+/* Mark valid inputs during .invalid state */
+.invalid input:required:valid {
+  border-color: #cecece; }
+
+section.footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  background-color: white; }
+  section.footer .section-wrapper {
+    padding-top: 1.666em; }
