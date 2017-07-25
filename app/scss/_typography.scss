@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size:   24px;
+  font-size:   28px;
   line-height: 1.185; // unit-less line-height to keep it flexible
   font-weight: 400; // Roman/Regular
   margin: 0 0 0.8rem 0; // 1rem for 16pt
@@ -30,17 +30,24 @@ h2 {
   }
 }
 
+h3 {
+  font-size:   20px;
+  font-weight: 600; // Roman/Regular
+  margin: 0.333em 0;
+  line-height: 1.185;
+}
+
 p {
   margin: 0 0 1em 0;
   font-weight: 300; // light
   font-size:   14px;
   line-height: 1.5;
-  @include breakpoint(medium) {
-    font-size: 16px;
-  }
-  @include breakpoint(large up) {
-    font-size: 20px;
-  }
+  // @include breakpoint(medium) {
+  //   font-size: 16px;
+  // }
+  // @include breakpoint(large up) {
+  //   font-size: 20px;
+  // }
 }
 
 a {
@@ -50,4 +57,9 @@ a {
   &:hover, &:focus {
     color: darken($blue, 15%);
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }

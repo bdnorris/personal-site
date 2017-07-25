@@ -563,7 +563,7 @@ body {
   font-family: 'Zilla Slab', serif;
   font-size: 16px;
   margin: 0;
-  padding: 0;
+  padding: 2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -571,7 +571,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #4D4D4D; }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.185;
   font-weight: 400;
   margin: 0 0 0.8rem 0; }
@@ -594,17 +594,17 @@ h2 {
     h2 {
       font-size: 48px; } }
 
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0.333em 0;
+  line-height: 1.185; }
+
 p {
   margin: 0 0 1em 0;
   font-weight: 300;
   font-size: 14px;
   line-height: 1.5; }
-  @media screen and (min-width: 48em) {
-    p {
-      font-size: 16px; } }
-  @media screen and (min-width: 67.5em) {
-    p {
-      font-size: 20px; } }
 
 a {
   color: #94CEC4;
@@ -612,6 +612,10 @@ a {
   transition: color 0.3s ease; }
   a:hover, a:focus {
     color: #60b6a7; }
+
+ul {
+  list-style: none;
+  padding: 0; }
 
 button, input[type='submit'] {
   background-color: transparent;
@@ -788,7 +792,8 @@ input.error-input {
       padding: 32px; } }
 
 header.masthead {
-  background-color: gray; }
+  background-color: yellow;
+  padding: 0; }
   header.masthead h2 {
     font-size: 2em;
     height: 1.2em; }
