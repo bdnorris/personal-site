@@ -694,6 +694,22 @@ button.button, input[type='submit'] {
   100% {
     transform: rotateX(-180deg); } }
 
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@keyframes text-focus {
+  0% {
+    filter: blur(12px);
+    opacity: 0; }
+  50% {
+    filter: blur(0px);
+    opacity: 1; }
+  100% {
+    filter: blur(12px);
+    opacity: 0; } }
+
 form {
   text-align: left; }
   form a {
@@ -801,14 +817,16 @@ header.masthead {
     display: inline-block;
     position: relative;
     height: 1.2em;
-    top: 1.25em;
+    top: 41px;
     margin-top: -1.5em;
     animation: flip-horizontal-bottom 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate forwards;
     transform-style: preserve-3d; }
+    header.masthead dl:hover {
+      animation-play-state: paused; }
   header.masthead dt {
     transform: translate3d(0, 0, 0);
     transform-style: preserve-3d;
-    background-color: aqua;
+    background-color: yellow;
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -817,7 +835,7 @@ header.masthead {
     height: 1.2em;
     overflow: hidden; }
     header.masthead dt:last-child {
-      background-color: pink;
+      background-color: yellow;
       transform: rotateX(180deg);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -825,6 +843,14 @@ header.masthead {
       top: 0;
       height: 1.2em;
       overflow: hidden; }
+
+.info-container {
+  background-color: aliceblue;
+  opacity: 0;
+  transition: opacity 1s ease; }
+
+li.info {
+  display: none; }
 
 footer {
   background-color: #1F1F1F;

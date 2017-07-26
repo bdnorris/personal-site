@@ -53,3 +53,22 @@
     transform: rotateX(-180deg);
   }
 }
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+@keyframes text-focus {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+}
