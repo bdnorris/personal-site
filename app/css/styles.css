@@ -849,7 +849,7 @@ header.masthead {
   opacity: 0;
   transition: opacity 1s ease; }
 
-li.info {
+li.info-element {
   display: none; }
 
 footer {

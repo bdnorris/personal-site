@@ -8,17 +8,15 @@
   opacity: 0;
   transition: opacity 1s ease;
 }
+.info-container__close {
 
-li.info {
+}
+.info-container__sub-container {
+
+}
+
+li.info-element {
   display: none;
   // opacity: 0;
   // transition: opacity 1s ease;
-}
-
-.close-info {
-
-}
-
-.sub-container {
-
 }
