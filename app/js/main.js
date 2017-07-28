@@ -13,11 +13,11 @@ function infoElement(element) {
 
 infoElement.prototype = {
   launch: function(selector) {
-    $(selector).css('opacity', '1').children('.info-container__sub-container').html(this.content);
+    $(selector).addClass('on').children('.info-container__sub-container').html(this.content);
   },
   close: function(selector) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
-    $(selector).css('opacity', '0');
+    $(selector).removeClass('on');
   }
 }
 
@@ -56,5 +56,15 @@ $(document).ready(function(){
       $('.info-container__sub-container').html('');
     }
   });
+
+  window.setInterval(function() {
+    $('.swap dt:first-child').toggleClass('on');
+  }, 1000);
+  window.setTimeout(function() {
+    window.setInterval(function() {
+      $('.swap dt:last-child').toggleClass('on');
+    }, 1000);
+  }, 1000);
+
 
 });

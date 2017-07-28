@@ -813,7 +813,7 @@ header.masthead {
   header.masthead h2 {
     font-size: 2em;
     height: 1.2em; }
-  header.masthead dl {
+  header.masthead h2.morph dl {
     display: inline-block;
     position: relative;
     height: 1.2em;
@@ -821,9 +821,9 @@ header.masthead {
     margin-top: -1.5em;
     animation: flip-horizontal-bottom 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate forwards;
     transform-style: preserve-3d; }
-    header.masthead dl:hover {
+    header.masthead h2.morph dl:hover {
       animation-play-state: paused; }
-  header.masthead dt {
+  header.masthead h2.morph dt {
     transform: translate3d(0, 0, 0);
     transform-style: preserve-3d;
     background-color: yellow;
@@ -834,7 +834,7 @@ header.masthead {
     display: block;
     height: 1.2em;
     overflow: hidden; }
-    header.masthead dt:last-child {
+    header.masthead h2.morph dt:last-child {
       background-color: yellow;
       transform: rotateX(180deg);
       -webkit-backface-visibility: hidden;
@@ -843,11 +843,26 @@ header.masthead {
       top: 0;
       height: 1.2em;
       overflow: hidden; }
+  header.masthead h2.swap dl {
+    display: inline-block; }
+  header.masthead h2.swap dt {
+    display: none; }
+    header.masthead h2.swap dt.on {
+      display: inline-block; }
 
 .info-container {
   background-color: aliceblue;
   opacity: 0;
-  transition: opacity 1s ease; }
+  transition: opacity 0.5s ease, transform 0.3s ease-in;
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  bottom: 3em;
+  transform: scale(0.5);
+  width: 80vw; }
+  .info-container.on {
+    transform: scale(1);
+    opacity: 1; }
 
 li.info-element {
   display: none; }

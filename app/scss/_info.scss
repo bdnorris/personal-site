@@ -6,7 +6,19 @@
   background-color: aliceblue;
   // display: none;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease, transform 0.3s ease-in;
+  position: absolute;
+  top: 3em;
+  right: 3em;
+  bottom: 3em;
+  transform: scale(0.5);
+  width: 80vw;
+  &.on {
+
+    // height: 100vw;
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .info-container__close {
 
