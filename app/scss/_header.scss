@@ -3,11 +3,16 @@
 $anim-height: 1.2em;
 $anim-width: 4.5em;
 header.masthead {
-  background-color: yellow;
+  background-color: $peach;
   padding: 0;
+  color: $red;
+  h1 {
+    color: $red;
+  }
   h2 {
     font-size: 2em;
     height: $anim-height;
+    color: $red;
   }
   h2.morph {
     dl {
