@@ -13,8 +13,12 @@ header {
   position: relative;
 }
 .paper {
-  background-color: $blue;
+  background-color: $wheat;
+  background-image: url(/images/LayeredPaperBall_reel_color.png);
+  background-size: 100%;
   color: $brick;
+  // animation: wobble-hor-bottom 0.8s infinite both;
+
   @include breakpoint(small) {
     flex: none;
     position: absolute;
@@ -24,9 +28,11 @@ header {
     right: 0;
   }
   @include breakpoint(medium up) {
-    flex: 0 0 20vw;
-    height: 20vw;
-    width: 20vw;
+    flex: 0 0 22vw;
+    height: 22vw;
+    width: 22vw;
+    max-width: 200px;
+    max-height: 200px;
     position: static;
     flex-flow: row nowrap;
   }
@@ -40,6 +46,9 @@ header {
     color: $text;
     padding: 0;
     margin: 0 0 0.5em 0;
+    @include breakpoint(medium up) {
+      margin: 0;
+    }
   }
   h2 {
     font-size: 2em;

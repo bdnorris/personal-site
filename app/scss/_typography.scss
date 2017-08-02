@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  font-size:   24px;
+  font-size:   22px;
   line-height: 1.185;
   font-weight: 400; // Roman/Regular
   margin: 0.333em 0;
@@ -36,15 +36,16 @@ h2 {
 h3 {
   font-size:   20px;
   font-weight: 600; // Roman/Regular
-  margin: 0.333em 0;
+  margin: 0 0 0.333em 0;
   line-height: 1.185;
 }
 
 p {
   margin: 0 0 1em 0;
   font-weight: 300; // light
-  font-size:   14px;
+  font-size:   1.333em;
   line-height: 1.5;
+  max-width: 42em;
   // @include breakpoint(medium) {
   //   font-size: 16px;
   // }
@@ -66,4 +67,10 @@ a {
 ul {
   list-style: none;
   padding: 0;
+}
+
+ul.horz-list {
+  li {
+    display: inline-block;
+  }
 }

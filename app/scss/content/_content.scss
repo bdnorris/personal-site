@@ -5,26 +5,26 @@ section.band {
   padding: 2em;
 }
 
-section.social {
-  ul {
-    li {
-      display: inline-block;
+section.bio {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
 
-      a {
-        svg {
-          width: 40px;
-          height: auto;
-          margin-right: 1em;
-          path {
-            fill: $blue;
-          }
-          transition: all 0.25s ease;
-        }
-        &:hover {
-          svg path {
-            fill: $gray;
-          }
-        }
+ul.social {
+  a {
+    svg {
+      width: 40px;
+      height: auto;
+      margin-right: 1em;
+      path {
+        fill: $blue;
+      }
+      transition: all 0.25s ease;
+    }
+    &:hover {
+      svg path {
+        fill: $gray;
       }
     }
   }

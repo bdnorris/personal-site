@@ -585,7 +585,7 @@ h1 {
       font-size: 86px; } }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.185;
   font-weight: 400;
   margin: 0.333em 0; }
@@ -599,14 +599,15 @@ h2 {
 h3 {
   font-size: 20px;
   font-weight: 600;
-  margin: 0.333em 0;
+  margin: 0 0 0.333em 0;
   line-height: 1.185; }
 
 p {
   margin: 0 0 1em 0;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5; }
+  font-size: 1.333em;
+  line-height: 1.5;
+  max-width: 42em; }
 
 a {
   color: #DB9075;
@@ -619,6 +620,9 @@ a {
 ul {
   list-style: none;
   padding: 0; }
+
+ul.horz-list li {
+  display: inline-block; }
 
 button, input[type='submit'] {
   background-color: transparent;
@@ -692,6 +696,27 @@ button, input[type='submit'] {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%; }
+  15% {
+    transform: translateX(-30px) rotate(-3deg); }
+  30% {
+    transform: translateX(15px) rotate(3deg); }
+  45% {
+    transform: translateX(-15px) rotate(-1.8deg); }
+  60% {
+    transform: translateX(9px) rotate(1.2deg); }
+  75% {
+    transform: translateX(-6px) rotate(-0.6deg); } }
 
 form {
   text-align: left; }
@@ -806,7 +831,9 @@ header {
       flex-flow: row nowrap; } }
 
 .paper {
-  background-color: #808A8C;
+  background-color: #EFCB97;
+  background-image: url(/images/LayeredPaperBall_reel_color.png);
+  background-size: 100%;
   color: #DB9075;
   -ms-flex: none;
   flex: none;
@@ -817,10 +844,12 @@ header {
   right: 0; }
   @media screen and (min-width: 48em) {
     .paper {
-      -ms-flex: 0 0 20vw;
-      flex: 0 0 20vw;
-      height: 20vw;
-      width: 20vw;
+      -ms-flex: 0 0 22vw;
+      flex: 0 0 22vw;
+      height: 22vw;
+      width: 22vw;
+      max-width: 200px;
+      max-height: 200px;
       position: static;
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
@@ -835,6 +864,9 @@ header {
     color: #6E605D;
     padding: 0;
     margin: 0 0 0.5em 0; }
+    @media screen and (min-width: 48em) {
+      .masthead h1 {
+        margin: 0; } }
   .masthead h2 {
     font-size: 2em;
     height: 1.2em;
@@ -1079,17 +1111,19 @@ section.band {
   width: 100%;
   padding: 2em; }
 
-section.social ul li {
-  display: inline-block; }
-  section.social ul li a svg {
-    width: 40px;
-    height: auto;
-    margin-right: 1em;
-    transition: all 0.25s ease; }
-    section.social ul li a svg path {
-      fill: #808A8C; }
-  section.social ul li a:hover svg path {
-    fill: #928A87; }
+section.bio p:last-child {
+  margin-bottom: 0; }
+
+ul.social a svg {
+  width: 40px;
+  height: auto;
+  margin-right: 1em;
+  transition: all 0.25s ease; }
+  ul.social a svg path {
+    fill: #808A8C; }
+
+ul.social a:hover svg path {
+  fill: #928A87; }
 
 .stage {
   background: rgba(128, 0, 128, 0.85) url(../images/bg_img.png) no-repeat center center;
