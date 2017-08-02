@@ -3,9 +3,10 @@
 }
 
 .info-container {
-  background-color: aliceblue;
+  background-color: $gray;
   // display: none;
   opacity: 0;
+  color: $wheat;
   transition: opacity 0.5s ease, transform 0.3s ease-in;
   position: absolute;
   top: 3em;
@@ -18,6 +19,9 @@
     // height: 100vw;
     transform: scale(1);
     opacity: 1;
+  }
+  h3 {
+    color: $wheat;
   }
 }
 .info-container__close {

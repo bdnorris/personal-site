@@ -3,16 +3,29 @@
 $anim-height: 1.2em;
 $anim-width: 4.5em;
 header.masthead {
-  background-color: $peach;
-  padding: 0;
-  color: $red;
+  background: $brick;
+  // background: linear-gradient(to left top, $start, $end);
+  // animation-name: colorChange;
+  // animation-delay: 0;
+  // animation-direction: normal;
+  // animation-duration: 2s;
+  // animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+  // animation-timing-function: linear;
+  // animation-play-state: running;
+  padding: 2em;
+  color: $text;
   h1 {
-    color: $red;
+    color: $text;
+    padding: 0;
+    margin: 0;
   }
   h2 {
     font-size: 2em;
     height: $anim-height;
-    color: $red;
+    color: $wheat;
+    padding: 0;
+    margin: 0;
   }
   // h2.morph {
   //   dl {
