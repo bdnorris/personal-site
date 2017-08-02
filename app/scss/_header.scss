@@ -10,34 +10,36 @@ header {
   @include breakpoint(medium up) {
     flex-flow: row nowrap;
   }
+  position: relative;
 }
 .paper {
-  flex: 0 0 100vw;
-  height: 100vw;
-
-
   background-color: $blue;
   color: $brick;
-  @include breakpoint(medium) {
-    flex: 0 0 20vw;
-    height: 20vw;
-    flex-flow: row nowrap;
+  @include breakpoint(small) {
+    flex: none;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 2em;
+    right: 0;
   }
-  @include breakpoint(large up) {
+  @include breakpoint(medium up) {
     flex: 0 0 20vw;
     height: 20vw;
-
+    width: 20vw;
+    position: static;
+    flex-flow: row nowrap;
   }
 }
 .masthead {
   flex: 1 1 auto;
   background: $brick;
-  padding: 2em;
+  padding: 2.25em 2em 1.75em 2em;
   color: $text;
   h1 {
     color: $text;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0.5em 0;
   }
   h2 {
     font-size: 2em;

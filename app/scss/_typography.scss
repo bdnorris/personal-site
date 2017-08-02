@@ -5,12 +5,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size:   54px;
+  font-size:   48px;
   line-height: 1.185; // unit-less line-height to keep it flexible
   font-weight: 400; // Roman/Regular
   margin: 0 0 0.8rem 0; // 1rem for 16pt
   font-family: "skolar-latin",serif;
   font-weight: 600;
+  line-height: 0.9;
   @include breakpoint(medium) {
     font-size: 68px;
   }

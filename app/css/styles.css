@@ -570,12 +570,13 @@ h1, h2, h3, h4, h5, h6, p {
   color: #6E605D; }
 
 h1 {
-  font-size: 54px;
+  font-size: 48px;
   line-height: 1.185;
   font-weight: 400;
   margin: 0 0 0.8rem 0;
   font-family: "skolar-latin",serif;
-  font-weight: 600; }
+  font-weight: 600;
+  line-height: 0.9; }
   @media screen and (min-width: 48em) {
     h1 {
       font-size: 68px; } }
@@ -797,41 +798,43 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  position: relative; }
   @media screen and (min-width: 48em) {
     header {
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
 
 .paper {
-  -ms-flex: 0 0 100vw;
-  flex: 0 0 100vw;
-  height: 100vw;
   background-color: #808A8C;
-  color: #DB9075; }
+  color: #DB9075;
+  -ms-flex: none;
+  flex: none;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 2em;
+  right: 0; }
   @media screen and (min-width: 48em) {
     .paper {
       -ms-flex: 0 0 20vw;
       flex: 0 0 20vw;
       height: 20vw;
+      width: 20vw;
+      position: static;
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
-  @media screen and (min-width: 67.5em) {
-    .paper {
-      -ms-flex: 0 0 20vw;
-      flex: 0 0 20vw;
-      height: 20vw; } }
 
 .masthead {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background: #DB9075;
-  padding: 2em;
+  padding: 2.25em 2em 1.75em 2em;
   color: #6E605D; }
   .masthead h1 {
     color: #6E605D;
     padding: 0;
-    margin: 0; }
+    margin: 0 0 0.5em 0; }
   .masthead h2 {
     font-size: 2em;
     height: 1.2em;
