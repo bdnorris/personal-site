@@ -613,7 +613,7 @@ a {
   transition: color 0.3s ease;
   font-weight: 300; }
   a:hover, a:focus {
-    color: #0000b3; }
+    color: #5b6364; }
 
 ul {
   list-style: none;
@@ -721,7 +721,7 @@ label.label-with-toggle {
 
 button#togglepw {
   float: right;
-  color: blue;
+  color: #808A8C;
   font-size: 14px;
   padding: 0;
   position: relative;
@@ -789,23 +789,58 @@ input.error-input {
     .stage {
       padding: 32px; } }
 
-header.masthead {
+header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+  @media screen and (min-width: 48em) {
+    header {
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+
+.paper {
+  -ms-flex: 0 0 100vw;
+  flex: 0 0 100vw;
+  height: 100vw;
+  background-color: #808A8C;
+  color: #DB9075; }
+  @media screen and (min-width: 48em) {
+    .paper {
+      -ms-flex: 0 0 20vw;
+      flex: 0 0 20vw;
+      height: 20vw;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+  @media screen and (min-width: 67.5em) {
+    .paper {
+      -ms-flex: 0 0 20vw;
+      flex: 0 0 20vw;
+      height: 20vw; } }
+
+.masthead {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   background: #DB9075;
   padding: 2em;
   color: #6E605D; }
-  header.masthead h1 {
+  .masthead h1 {
     color: #6E605D;
     padding: 0;
     margin: 0; }
-  header.masthead h2 {
+  .masthead h2 {
     font-size: 2em;
     height: 1.2em;
     color: #EFCB97;
     padding: 0;
     margin: 0; }
-  header.masthead h2.swap {
+  .masthead h2.swap {
     position: relative; }
-    header.masthead h2.swap span {
+    .masthead h2.swap span {
       display: inline-block;
       position: absolute;
       left: 2em;
@@ -813,7 +848,7 @@ header.masthead {
       filter: blur(6px);
       opacity: 0;
       transition: filter 0.5s linear, opacity 1s ease; }
-      header.masthead h2.swap span.on {
+      .masthead h2.swap span.on {
         opacity: 1;
         filter: blur(0px); }
 
@@ -890,7 +925,7 @@ nav.nav--mobile {
           nav.nav--mobile .nav--overlay ul li a::after {
             content: '';
             display: inline-block;
-            background-color: blue;
+            background-color: #808A8C;
             height: 3px;
             width: 0;
             position: absolute;
@@ -979,7 +1014,7 @@ button.hamburger {
     overflow: hidden; }
     button.hamburger .hamburger-container div {
       height: 3px;
-      background-color: blue;
+      background-color: #808A8C;
       margin-bottom: 5px;
       transform-origin: center; }
       button.hamburger .hamburger-container div.forx {
@@ -1041,6 +1076,18 @@ section.band {
   width: 100%;
   padding: 2em; }
 
+section.social ul li {
+  display: inline-block; }
+  section.social ul li a svg {
+    width: 40px;
+    height: auto;
+    margin-right: 1em;
+    transition: all 0.25s ease; }
+    section.social ul li a svg path {
+      fill: #808A8C; }
+  section.social ul li a:hover svg path {
+    fill: #928A87; }
+
 .stage {
   background: rgba(128, 0, 128, 0.85) url(../images/bg_img.png) no-repeat center center;
   background-size: cover;
@@ -1068,7 +1115,7 @@ section.band {
       width: 177px;
       height: 115.69274px; }
     .form-lockup a.identity svg .primary {
-      fill: blue; }
+      fill: #808A8C; }
     .form-lockup a.identity svg .secondary {
       fill: red; }
   .form-lockup form {

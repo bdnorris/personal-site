@@ -2,17 +2,36 @@
 
 $anim-height: 1.2em;
 $anim-width: 4.5em;
-header.masthead {
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  @include breakpoint(medium up) {
+    flex-flow: row nowrap;
+  }
+}
+.paper {
+  flex: 0 0 100vw;
+  height: 100vw;
+
+
+  background-color: $blue;
+  color: $brick;
+  @include breakpoint(medium) {
+    flex: 0 0 20vw;
+    height: 20vw;
+    flex-flow: row nowrap;
+  }
+  @include breakpoint(large up) {
+    flex: 0 0 20vw;
+    height: 20vw;
+
+  }
+}
+.masthead {
+  flex: 1 1 auto;
   background: $brick;
-  // background: linear-gradient(to left top, $start, $end);
-  // animation-name: colorChange;
-  // animation-delay: 0;
-  // animation-direction: normal;
-  // animation-duration: 2s;
-  // animation-fill-mode: forwards;
-  // animation-iteration-count: infinite;
-  // animation-timing-function: linear;
-  // animation-play-state: running;
   padding: 2em;
   color: $text;
   h1 {
@@ -27,58 +46,7 @@ header.masthead {
     padding: 0;
     margin: 0;
   }
-  // h2.morph {
-  //   dl {
-  //     display: inline-block;
-  //     position: relative;
-  //     height: $anim-height;
-  //     top: 41px;
-  //     // left: 0;
-  //     // width: $anim-width;
-  //     margin-top: -1.5em;
-  //     // background-color: teal;
-  //     animation: flip-horizontal-bottom 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate forwards;
-  //     transform-style: preserve-3d;
-  //     &:hover {
-  //       animation-play-state: paused;
-  //     }
-  //   }
-  //   dt {
-  //     transform: translate3d(0,0,0);
-  //     transform-style: preserve-3d;
-  //     background-color: yellow;
-  //     position: absolute;
-  //     backface-visibility: hidden;
-  //     top: 0;
-  //     display: block;
-  //     height: $anim-height;
-  //     overflow: hidden;
-  //     // width: $anim-width;
-  //     // transition: all 1s ease;
-  //
-  //     &:last-child {
-  //       background-color: yellow;
-  //       transform: rotateX(180deg);
-  //       backface-visibility: hidden;
-  //       display: block;
-  //       top: 0;
-  //       height: $anim-height;
-  //       overflow: hidden;
-  //       // top: -0.2em
-  //       // position: absolute;
-  //       // top: 0;
-  //       // top: 1em;
-  //       // animation-name: fadeInOut;
-  //       // animation-delay: 0;
-  //       // animation-direction: normal;
-  //       // animation-duration: 2s;
-  //       // animation-fill-mode: forwards;
-  //       // animation-iteration-count: infinite;
-  //       // animation-timing-function: ease;
-  //       // animation-play-state: running;
-  //     }
-  //   }
-  // }
+
   h2.swap {
     position: relative;
     span {
