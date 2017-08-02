@@ -58,13 +58,15 @@ $(document).ready(function(){
   });
 
   window.setInterval(function() {
-    $('.swap dt:first-child').toggleClass('on');
-  }, 1000);
+    $('.swap span:first-child').toggleClass('on');
+    // $('.swap dt:last-child').toggleClass('off');
+  }, 3000);
   window.setTimeout(function() {
     window.setInterval(function() {
-      $('.swap dt:last-child').toggleClass('on');
-    }, 1000);
-  }, 1000);
+      $('.swap span:last-child').toggleClass('on');
+      // $('.swap dt:first-child').toggleClass('off');
+    }, 3000);
+  }, 3000);
 
 
 });
