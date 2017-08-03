@@ -13,18 +13,38 @@ function infoElement(element) {
 }
 
 infoElement.prototype = {
-  launch: function(selector) {
-    $(selector).addClass('on').children('.info-container__sub-container').html(this.content).addClass('has-content');
+  launch: function(selector, key) {
+    $(selector).addClass('on').children('.info-container__sub-container').html(this.content).addClass('has-content').attr('data-key', key);
     this.open = true;
+    console.log('launch')
   },
   close: function(selector) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
-    $(selector).removeClass('on').children('.info-container__sub-container').html('').removeClass('has-content');;
+    console.log('close')
+    $(selector).removeClass('on').children('.info-container__sub-container').html('').removeClass('has-content').attr('data-key', 'off');
     this.open = false;
   },
-  change: function(selector) {
+  change: function(selector, key) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
-    $(selector).children('.info-container__sub-container').removeClass('has-content').html(this.content).delay(1000).addClass('has-content');
+    let prevKey = $(selector).children('.info-container__sub-container').attr('data-key');
+    let open = false;
+    if (prevKey != NaN) {
+      open = true;
+    }
+    else {
+      prevKey = parseInt(prevKey, 10)
+      infoElements[prevKey].open = false;
+    }
+    console.log(prevKey)
+    console.log('change')
+    let content = this.content;
+    $(selector).children('.info-container__sub-container')
+      .animate({opacity: 0}, 300, function(){
+        $(selector).children('.info-container__sub-container').html(content);
+      })
+      .attr('data-key', key)
+      .animate({opacity: 1}, 1000, function(){});
+    this.open = true;
   }
 }
 
@@ -71,16 +91,22 @@ $(document).ready(function(){
 
   $(document).on('click', '.info-launcher', function(){
     var infoLabel = $(this).data('for');
-    // var content = $('.info[data-subject='+infoLabel+']').html();
-    // $('.info-container').css('opacity', '1');
-    // $('.info-container > .sub-container').html(content);
+    let prevKey = $('.info-container__sub-container').attr('data-key');
+    // prevKey = parseInt(prevKey, 10)
+    let open = false;
+    // debugger;
+    if (prevKey != 'off') {
+      open = true;
+    }
     for (var i = 0, count = infoElements.length ; i < count ; i++) {
       if (infoLabel === infoElements[i].label) {
-        if (infoElements[i].open == false) {
-          infoElements[i].launch('.info-container');
+        if (open === false) {
+          infoElements[i].launch('.info-container', i);
+          // console.log('Launch | key: '+i+" open: "+infoElements[i].open)
         }
         else {
-          infoElements[i].change('.info-container');
+          infoElements[i].change('.info-container', i);
+          // console.log('Change | key: '+i+" open: "+infoElements[i].open)
         }
       }
     }

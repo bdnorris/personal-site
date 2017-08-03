@@ -1113,12 +1113,6 @@ button.hamburger {
   .info-container__close svg path {
     fill: #EFE9DD; }
 
-.info-container__sub-container {
-  opacity: 0;
-  transition: opacity 1s ease; }
-  .info-container__sub-container.has-content {
-    opacity: 1; }
-
 li.info-element {
   display: none; }
 
