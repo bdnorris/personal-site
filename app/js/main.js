@@ -7,17 +7,24 @@ function infoElement(element) {
   (this.elem = element),
   // its computed height as a number,
   (this.label = $(element).data('subject')),
-  (this.content = $(element).html())
+  (this.content = $(element).html()),
+  (this.open = false)
   // (this.button = $('[data-for='+this.label+']'))
 }
 
 infoElement.prototype = {
   launch: function(selector) {
-    $(selector).addClass('on').children('.info-container__sub-container').html(this.content);
+    $(selector).addClass('on').children('.info-container__sub-container').html(this.content).addClass('has-content');
+    this.open = true;
   },
   close: function(selector) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
-    $(selector).removeClass('on');
+    $(selector).removeClass('on').children('.info-container__sub-container').html('').removeClass('has-content');;
+    this.open = false;
+  },
+  change: function(selector) {
+    // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
+    $(selector).children('.info-container__sub-container').removeClass('has-content').html(this.content).delay(1000).addClass('has-content');
   }
 }
 
@@ -47,7 +54,7 @@ var wrap = function (direction, element, frameHeight) {
       } else if (direction === 'reverse') {
         newFrameHeight = newFrameHeight + frameHeight;
       } else {}
-    }, i * 80)
+    }, i * 80);
   }
   // }
 };
@@ -69,7 +76,12 @@ $(document).ready(function(){
     // $('.info-container > .sub-container').html(content);
     for (var i = 0, count = infoElements.length ; i < count ; i++) {
       if (infoLabel === infoElements[i].label) {
-        infoElements[i].launch('.info-container');
+        if (infoElements[i].open == false) {
+          infoElements[i].launch('.info-container');
+        }
+        else {
+          infoElements[i].change('.info-container');
+        }
       }
     }
   });

@@ -3,32 +3,49 @@
 }
 
 .info-container {
-  background-color: $gray;
+  background-color: $blue;
   // display: none;
   opacity: 0;
   color: $wheat;
-  transition: opacity 0.5s ease, transform 0.3s ease-in;
-  position: absolute;
-  top: 3em;
-  right: 3em;
-  bottom: 3em;
+  transition:
+    opacity 0.5s ease,
+    transform 0.4s ease-in,
+    left 0.4s ease-in;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  bottom: 0;
   transform: scale(0.5);
   width: 80vw;
+  padding: 2em;
   &.on {
-
+    left: 20vw;
     // height: 100vw;
     transform: scale(1);
     opacity: 1;
   }
-  h3 {
+  h2 {
     color: $wheat;
+  }
+  p {
+    color: $stone;
   }
 }
 .info-container__close {
-
+  svg {
+    width: 1em;
+    height: auto;
+    path {
+      fill: $stone;
+    }
+  }
 }
 .info-container__sub-container {
-
+  opacity: 0;
+  transition: opacity 1s ease;
+  &.has-content {
+    opacity: 1;
+  }
 }
 
 li.info-element {

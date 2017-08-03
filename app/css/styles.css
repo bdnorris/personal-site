@@ -1087,21 +1087,37 @@ button.hamburger {
       display: none; } }
 
 .info-container {
-  background-color: #928A87;
+  background-color: #808A8C;
   opacity: 0;
   color: #EFCB97;
-  transition: opacity 0.5s ease, transform 0.3s ease-in;
-  position: absolute;
-  top: 3em;
-  right: 3em;
-  bottom: 3em;
+  transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  bottom: 0;
   transform: scale(0.5);
-  width: 80vw; }
+  width: 80vw;
+  padding: 2em; }
   .info-container.on {
+    left: 20vw;
     transform: scale(1);
     opacity: 1; }
-  .info-container h3 {
+  .info-container h2 {
     color: #EFCB97; }
+  .info-container p {
+    color: #EFE9DD; }
+
+.info-container__close svg {
+  width: 1em;
+  height: auto; }
+  .info-container__close svg path {
+    fill: #EFE9DD; }
+
+.info-container__sub-container {
+  opacity: 0;
+  transition: opacity 1s ease; }
+  .info-container__sub-container.has-content {
+    opacity: 1; }
 
 li.info-element {
   display: none; }
