@@ -689,13 +689,13 @@ button, input[type='submit'] {
  */
 @keyframes text-focus {
   0% {
-    opacity: 0; }
+    filter: blur(2px); }
   20% {
-    opacity: 1; }
+    filter: blur(0px); }
   80% {
-    opacity: 1; }
+    filter: blur(0px); }
   100% {
-    opacity: 0; } }
+    filter: blur(2px); } }
 
 /**
  * ----------------------------------------
@@ -708,15 +708,15 @@ button, input[type='submit'] {
     transform: translateX(0%);
     transform-origin: 50% 50%; }
   15% {
-    transform: translateX(-30px) rotate(-3deg); }
+    transform: translateX(-4px) rotate(-2deg); }
   30% {
-    transform: translateX(15px) rotate(3deg); }
+    transform: translateX(2px) rotate(2deg); }
   45% {
-    transform: translateX(-15px) rotate(-1.8deg); }
+    transform: translateX(-2px) rotate(-1deg); }
   60% {
-    transform: translateX(9px) rotate(1.2deg); }
+    transform: translateX(1px) rotate(1deg); }
   75% {
-    transform: translateX(-6px) rotate(-0.6deg); } }
+    transform: translateX(-1px) rotate(-0.3deg); } }
 
 form {
   text-align: left; }
@@ -832,16 +832,20 @@ header {
 
 .paper {
   background-color: #EFCB97;
-  background-image: url(/images/LayeredPaperBall_reel_color.png);
-  background-size: 100%;
-  color: #DB9075;
+  overflow: hidden;
+  position: relative;
   -ms-flex: none;
   flex: none;
-  position: absolute;
   height: 100px;
-  width: 100px;
-  top: 2em;
-  right: 0; }
+  width: 100px; }
+  .paper img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: wobble-hor-bottom 2s infinite both; }
+  .paper:hover img {
+    animation-play-state: paused; }
   @media screen and (min-width: 48em) {
     .paper {
       -ms-flex: 0 0 22vw;
@@ -850,7 +854,6 @@ header {
       width: 22vw;
       max-width: 200px;
       max-height: 200px;
-      position: static;
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
 

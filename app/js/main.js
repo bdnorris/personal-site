@@ -50,8 +50,37 @@ infoElement.prototype = {
 
 // cacheing paper element
 var element = document.getElementById('paper');
+var elementImg = document.getElementById('wrapper-img');
 
-var wrap = function (direction, element, frameHeight) {
+// var wrap = function (direction, element, frameHeight) {
+//   let numFrames = 5;
+//   let currframeHeight = frameHeight // pixels
+//   // let direction = direction
+//   let newFrameHeight = '';
+//   // if (Number.isInteger(numFrames)) {
+//   if (direction === 'forwards') {
+//     newFrameHeight = 0;
+//   } else if (direction === 'reverse') {
+//     // numFrames = numFrames - 1;
+//     newFrameHeight = (0 - currframeHeight * numFrames);
+//   } else {}
+//   for (let i = 0; i <= numFrames; i++) {
+//     // (function(i){
+//     window.setTimeout(function () {
+//       console.log('frameHeight: ' + newFrameHeight + '...' + i);
+//       // $(jQObj).css('background-position', '0 '+newFrameHeight+'px')
+//       element.style.backgroundPosition = '0 ' + newFrameHeight + 'px';
+//       if (direction === 'forwards') {
+//         newFrameHeight = newFrameHeight - frameHeight;
+//       } else if (direction === 'reverse') {
+//         newFrameHeight = newFrameHeight + frameHeight;
+//       } else {}
+//     }, i * 80);
+//   }
+//   // }
+// };
+
+var wrapImg = function (direction, element, frameHeight) {
   let numFrames = 5;
   let currframeHeight = frameHeight // pixels
   // let direction = direction
@@ -68,7 +97,7 @@ var wrap = function (direction, element, frameHeight) {
     window.setTimeout(function () {
       console.log('frameHeight: ' + newFrameHeight + '...' + i);
       // $(jQObj).css('background-position', '0 '+newFrameHeight+'px')
-      element.style.backgroundPosition = '0 ' + newFrameHeight + 'px';
+      element.style = 'top: ' + newFrameHeight + 'px';
       if (direction === 'forwards') {
         newFrameHeight = newFrameHeight - frameHeight;
       } else if (direction === 'reverse') {
@@ -137,13 +166,27 @@ $(document).ready(function(){
     }, 3000);
   }, 3000);
 
-  $(document).on('mouseover', '#paper', function() {
-    var frameHeight = $('#paper').height();
-    wrap('forwards', element, frameHeight);
+  // $(document).on('mouseover', '#paper', function() {
+  //   var frameHeight = $('#paper').height();
+  //   wrap('forwards', element, frameHeight);
+  // });
+  // $(document).on('mouseout', '#paper', function() {
+  //   var frameHeight = $('#paper').height();
+  //   wrap('reverse', element, frameHeight);
+  // });
+
+  $(document).on('mouseover', '.paper', function() {
+    var frameHeight = $('.paper').height();
+    // let style = window.getComputedStyle(elementImg, null);
+    // let frameHeight = style.getPropertyValue("height");
+    // console.dir(frameHeight);
+    wrapImg('forwards', elementImg, frameHeight);
   });
-  $(document).on('mouseout', '#paper', function() {
-    var frameHeight = $('#paper').height();
-    wrap('reverse', element, frameHeight);
+  $(document).on('mouseout', '.paper', function() {
+    var frameHeight = $('.paper').height();
+    // let style = window.getComputedStyle(elementImg, null);
+    // let frameHeight = style.getPropertyValue("height");
+    wrapImg('reverse', elementImg, frameHeight);
   });
 
 });

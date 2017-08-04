@@ -12,20 +12,38 @@ header {
   }
   position: relative;
 }
+
 .paper {
   background-color: $wheat;
-  background-image: url(/images/LayeredPaperBall_reel_color.png);
-  background-size: 100%;
-  color: $brick;
-  // animation: wobble-hor-bottom 0.8s infinite both;
+  // background-image: url(/images/LayeredPaperBall_reel_color.png);
+  // background-size: 100%;
+  // color: $brick;
+  // width: 200px;
+  // height: 200px;
+  overflow: hidden;
+  position: relative;
+  // padding: 16px;
+  img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: wobble-hor-bottom 2s infinite both;
+  }
+  &:hover {
+    img {
+      animation-play-state: paused;
+    }
+  }
+
 
   @include breakpoint(small) {
     flex: none;
-    position: absolute;
+    // position: absolute;
     height: 100px;
     width: 100px;
-    top: 2em;
-    right: 0;
+    // top: 2em;
+    // right: 0;
   }
   @include breakpoint(medium up) {
     flex: 0 0 22vw;
@@ -33,10 +51,11 @@ header {
     width: 22vw;
     max-width: 200px;
     max-height: 200px;
-    position: static;
+    // position: static;
     flex-flow: row nowrap;
   }
-}
+} // .paper
+
 .masthead {
   flex: 1 1 auto;
   background: $brick;
