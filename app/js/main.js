@@ -175,15 +175,15 @@ $(document).ready(function(){
   //   wrap('reverse', element, frameHeight);
   // });
 
-  $(document).on('mouseover', '.paper', function() {
-    var frameHeight = $('.paper').height();
+  $(document).on('mouseover', '#paper', function() {
+    var frameHeight = $('#paper').height();
     // let style = window.getComputedStyle(elementImg, null);
     // let frameHeight = style.getPropertyValue("height");
-    // console.dir(frameHeight);
+    console.log('mouseover');
     wrapImg('forwards', elementImg, frameHeight);
   });
-  $(document).on('mouseout', '.paper', function() {
-    var frameHeight = $('.paper').height();
+  $(document).on('mouseout', '#paper', function() {
+    var frameHeight = $('#paper').height();
     // let style = window.getComputedStyle(elementImg, null);
     // let frameHeight = style.getPropertyValue("height");
     wrapImg('reverse', elementImg, frameHeight);

@@ -23,27 +23,38 @@ header {
   overflow: hidden;
   position: relative;
   // padding: 16px;
-  img {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    animation: wobble-hor-bottom 2s infinite both;
-  }
-  &:hover {
+  div {
+    transform-origin: top center;
+    transform: rotate(0);
+    animation: wobble-hor-bottom 2s ease infinite alternate both;
     img {
-      animation-play-state: paused;
+
+    }
+    &:hover {
+      // img {
+        animation-play-state: paused;
+        cursor: default;
+      // }
     }
   }
 
-
   @include breakpoint(small) {
-    flex: none;
+    flex: 0 0 36vw;
     // position: absolute;
-    height: 100px;
-    width: 100px;
+    // height: 100px;
+    // width: 100px;
     // top: 2em;
     // right: 0;
+    div {
+      img {
+        position: absolute;
+        top: 0;
+        left: 32vw;
+        width: 36vw;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
   }
   @include breakpoint(medium up) {
     flex: 0 0 22vw;
@@ -53,6 +64,15 @@ header {
     max-height: 200px;
     // position: static;
     flex-flow: row nowrap;
+    div {
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+      }
+    }
   }
 } // .paper
 
@@ -87,7 +107,7 @@ header {
       top: 0;
       filter: blur(6px);
       opacity: 0;
-      transition: filter 0.5s linear, opacity 1s ease;
+      transition: filter 0.5s linear, opacity 0.75s ease;
       &.on {
         opacity: 1;
         filter: blur(0px);
