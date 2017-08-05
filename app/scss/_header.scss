@@ -30,6 +30,11 @@ header {
     img {
 
     }
+    #doodle-holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     &:hover {
       // img {
         animation-play-state: paused;

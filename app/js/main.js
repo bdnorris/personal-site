@@ -49,7 +49,8 @@ infoElement.prototype = {
 }
 
 var randomDoodles = [
-  ''
+  'eye.png',
+  'light_bulb.png'
 ];
 
 //  paper element
@@ -83,6 +84,12 @@ var elementImg = document.getElementById('wrapper-img');
 //   }
 //   // }
 // };
+var findRandomDoodle = function () {
+  let max = randomDoodles.length;
+  let min = 0;
+  let rand = Math.floor(Math.random() * (max - min)) + min;
+  return randomDoodles[rand];
+}
 
 var wrapImg = function (direction, element, frameHeight) {
   let numFrames = 5;
@@ -90,11 +97,14 @@ var wrapImg = function (direction, element, frameHeight) {
   // let direction = direction
   let newFrameHeight = '';
   // if (Number.isInteger(numFrames)) {
+  let doodle = findRandomDoodle();
   if (direction === 'forwards') {
     newFrameHeight = 0;
+    $('#doodle-holder').attr('src', '/images/doodles/' + doodle);
   } else if (direction === 'reverse') {
     // numFrames = numFrames - 1;
     newFrameHeight = (0 - currframeHeight * numFrames);
+    $('#doodle-holder').attr('src', '');
   } else {}
   for (let i = 0; i <= numFrames; i++) {
     // (function(i){
@@ -109,7 +119,6 @@ var wrapImg = function (direction, element, frameHeight) {
       } else {}
     }, i * 80);
   }
-  // }
 };
 
 
