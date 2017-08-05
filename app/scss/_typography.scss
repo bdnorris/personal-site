@@ -34,9 +34,9 @@ h2 {
 }
 
 h3 {
-  font-size:   20px;
+  font-size:   26px;
   font-weight: 600; // Roman/Regular
-  margin: 0 0 0.333em 0;
+  margin: 0 0 0.25em 0;
   line-height: 1.185;
 }
 
@@ -55,22 +55,34 @@ p {
 }
 
 a {
-  color: $brick;
+  color: $text;
   text-decoration: none;
   transition: color 0.3s ease;
   font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.4;
+  transition: color 0.5s ease, border 0.5s ease;
+  display: inline-block;
+  margin-bottom: 0.2em;
+  border-bottom: 1px dashed transparent;
+  padding-bottom: 0.1em;
   &:hover, &:focus {
     color: darken($blue, 15%);
+    border-bottom: 1px dashed darken($blue, 15%);
   }
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 2em;
 }
 
 ul.horz-list {
   li {
     display: inline-block;
+    a {
+      border: none;
+    }
   }
 }

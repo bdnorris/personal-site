@@ -48,7 +48,11 @@ infoElement.prototype = {
   }
 }
 
-// cacheing paper element
+var randomDoodles = [
+  ''
+];
+
+//  paper element
 var element = document.getElementById('paper');
 var elementImg = document.getElementById('wrapper-img');
 
@@ -188,5 +192,13 @@ $(document).ready(function(){
     // let frameHeight = style.getPropertyValue("height");
     wrapImg('reverse', elementImg, frameHeight);
   });
+
+  var mailLink = $('#obfuscated').attr('href');
+  mailLink = atob(mailLink);
+  $('#obfuscated').attr('href', mailLink);
+
+  var mailText = $('#obfuscated').html();
+  mailText = atob(mailText);
+  $('#obfuscated').html(mailText);
 
 });

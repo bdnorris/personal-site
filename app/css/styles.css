@@ -598,9 +598,9 @@ h2 {
       font-size: 48px; } }
 
 h3 {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 600;
-  margin: 0 0 0.333em 0;
+  margin: 0 0 0.25em 0;
   line-height: 1.185; }
 
 p {
@@ -611,28 +611,45 @@ p {
   max-width: 42em; }
 
 a {
-  color: #DB9075;
+  color: #6E605D;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1.4;
+  transition: color 0.5s ease, border 0.5s ease;
+  display: inline-block;
+  margin-bottom: 0.2em;
+  border-bottom: 1px dashed transparent;
+  padding-bottom: 0.1em; }
   a:hover, a:focus {
-    color: #5b6364; }
+    color: #5b6364;
+    border-bottom: 1px dashed #5b6364; }
 
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 2em; }
 
 ul.horz-list li {
   display: inline-block; }
+  ul.horz-list li a {
+    border: none; }
 
 button, input[type='submit'] {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-family: "skolar-sans-latin", sans-serif;
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: 300;
-  padding: 0; }
+  padding: 0;
+  color: #6E605D;
+  transition: color 0.5s ease, border 0.5s ease;
+  border-bottom: 1px dashed transparent; }
+  button:hover, button:focus, input[type='submit']:hover, input[type='submit']:focus {
+    color: #5b6364;
+    border-bottom: 1px dashed #5b6364; }
 
 @keyframes fadeInRight {
   from {

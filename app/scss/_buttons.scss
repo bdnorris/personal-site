@@ -5,7 +5,17 @@ button, input[type='submit'] {
   border: none;
   cursor: pointer;
   font-family: "skolar-sans-latin", sans-serif;
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: 300;
   padding: 0;
+  color: $text;
+  transition: color 0.5s ease, border 0.5s ease;
+  // display: inline-block;
+  // margin-bottom: 0.2em;
+  border-bottom: 1px dashed transparent;
+  // padding-bottom: 0.1em;
+  &:hover, &:focus {
+    color: darken($blue, 15%);
+    border-bottom: 1px dashed darken($blue, 15%);
+  }
 }
