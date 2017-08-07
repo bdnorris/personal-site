@@ -675,6 +675,14 @@ button, input[type='submit'] {
   100% {
     opacity: 1; } }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
 @keyframes colorChange {
   0% {
     background-color: red; }
@@ -902,13 +910,15 @@ header {
   -ms-flex: 0 0 36vw;
   flex: 0 0 36vw; }
   .paper div {
-    transform-origin: top center;
-    transform: rotate(0);
-    animation: wobble-hor-bottom 2s ease infinite alternate both; }
-    .paper div #doodle-holder {
+    transform-origin: top center; }
+    .paper div img#doodle-holder {
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      opacity: 0;
+      padding: 1em; }
+      .paper div img#doodle-holder.on {
+        animation: fadeIn 0.25s linear 0.4s 1 alternate forwards; }
     .paper div:hover {
       animation-play-state: paused;
       cursor: default; }

@@ -50,8 +50,20 @@ infoElement.prototype = {
 
 var randomDoodles = [
   'eye.png',
-  'light_bulb.png'
+  'light_bulb.png',
+  'aa.png',
+  'cat.png',
+  'geo.png',
+  'landscape.png',
+  'puzzle.png',
+  'skull.png',
+  'swear.png',
+  'web.png'
 ];
+
+for (let i = 0; i <= randomDoodles.length; i++) {
+    $('body').append('<img src="/images/doodles/'+randomDoodles[i]+'" style="display:none;">');
+}
 
 //  paper element
 var element = document.getElementById('paper');
@@ -86,36 +98,41 @@ var elementImg = document.getElementById('wrapper-img');
 // };
 var findRandomDoodle = function () {
   let max = randomDoodles.length;
-  let min = 0;
+  // console.log("max: "+max);
+  let min = 1;
+  // console.log("min: "+min);
   let rand = Math.floor(Math.random() * (max - min)) + min;
+  // console.log("rand: "+rand);
   return randomDoodles[rand];
 }
 
 var wrapImg = function (direction, element, frameHeight) {
   let numFrames = 5;
   let currframeHeight = frameHeight // pixels
-  // let direction = direction
   let newFrameHeight = '';
-  // if (Number.isInteger(numFrames)) {
-  let doodle = findRandomDoodle();
   if (direction === 'forwards') {
+    let doodle = findRandomDoodle();
     newFrameHeight = 0;
-    $('#doodle-holder').attr('src', '/images/doodles/' + doodle);
-  } else if (direction === 'reverse') {
+    $('#doodle-holder').attr('src', '/images/doodles/' + doodle).addClass('on');
+  } else {
     // numFrames = numFrames - 1;
     newFrameHeight = (0 - currframeHeight * numFrames);
-    $('#doodle-holder').attr('src', '');
-  } else {}
+    $('#doodle-holder').attr('src', '').removeClass('on');
+  }
   for (let i = 0; i <= numFrames; i++) {
     // (function(i){
+    // console.log('wrap function running');
     window.setTimeout(function () {
-      console.log('frameHeight: ' + newFrameHeight + '...' + i);
+      // console.log('frameHeight: ' + newFrameHeight + '...' + i);
       // $(jQObj).css('background-position', '0 '+newFrameHeight+'px')
-      element.style = 'top: ' + newFrameHeight + 'px';
+      // console.dir(element);
+      element.style.top = newFrameHeight + 'px';
       if (direction === 'forwards') {
+        // console.log('forwards running');
         newFrameHeight = newFrameHeight - frameHeight;
       } else if (direction === 'reverse') {
         newFrameHeight = newFrameHeight + frameHeight;
+        // console.log('reverse running');
       } else {}
     }, i * 80);
   }
