@@ -15,7 +15,7 @@ button, input[type='submit'] {
   border-bottom: 1px dashed transparent;
   // padding-bottom: 0.1em;
   &:hover, &:focus {
-    color: darken($blue, 15%);
-    border-bottom: 1px dashed darken($blue, 15%);
+    color: darken($tone3, 15%);
+    border-bottom: 1px dashed darken($tone3, 15%);
   }
 }

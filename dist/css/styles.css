@@ -563,7 +563,7 @@ body {
   font-family: "skolar-sans-latin", sans-serif;
   font-size: 16px;
   margin: 0;
-  background-color: #EFE9DD;
+  background-color: #ece7e4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -685,13 +685,13 @@ button, input[type='submit'] {
 
 @keyframes colorChange {
   0% {
-    background-color: red; }
+    background-color: #DB9075; }
   25% {
-    background-color: blue; }
+    background-color: #edd2aa; }
   75% {
-    background-color: pink; }
+    background-color: #808A8C; }
   100% {
-    background-color: red; } }
+    background-color: #DB9075; } }
 
 @keyframes rotateB {
   0% {
@@ -904,7 +904,7 @@ header {
       flex-flow: row nowrap; } }
 
 .paper {
-  background-color: #EFCB97;
+  background-color: #DB9075;
   overflow: hidden;
   position: relative;
   -ms-flex: 0 0 36vw;
@@ -916,7 +916,8 @@ header {
       top: 0;
       left: 0;
       opacity: 0;
-      padding: 1em; }
+      padding: 1em;
+      left: 32vw; }
       .paper div img#doodle-holder.on {
         animation: fadeIn 0.25s linear 0.4s 1 alternate forwards; }
     .paper div:hover {
@@ -949,7 +950,7 @@ header {
 .masthead {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  background: #DB9075;
+  background: #edd2aa;
   padding: 2.25em 2em 1.75em 2em;
   color: #6E605D; }
   .masthead h1 {
@@ -962,7 +963,7 @@ header {
   .masthead h2 {
     font-size: 2em;
     height: 1.2em;
-    color: #EFCB97;
+    color: #DB9075;
     padding: 0;
     margin: 0; }
   .masthead h2.swap {
@@ -1015,7 +1016,7 @@ nav.nav--mobile {
   float: right; }
   nav.nav--mobile .nav--overlay {
     z-index: 3;
-    background-color: rgba(0, 0, 139, 0.95);
+    background-color: rgba(0, 0, 255, 0.95);
     height: 100vh;
     width: calc(100vw - (100vw - 100%));
     top: 0;
@@ -1099,7 +1100,7 @@ nav.nav--desktop {
           display: inline-block;
           width: 100px;
           height: 3px;
-          background-color: darkblue;
+          background-color: blue;
           position: absolute;
           bottom: -2px;
           left: -9999px;
@@ -1181,7 +1182,7 @@ button.hamburger {
 .info-container {
   background-color: #808A8C;
   opacity: 0;
-  color: #EFCB97;
+  color: #DB9075;
   transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
   position: fixed;
   top: 0;
@@ -1195,23 +1196,23 @@ button.hamburger {
     transform: scale(1);
     opacity: 1; }
   .info-container h2 {
-    color: #EFCB97; }
+    color: #DB9075; }
   .info-container p {
-    color: #EFE9DD; }
+    color: #ece7e4; }
 
 .info-container__close svg {
   width: 1em;
   height: auto; }
   .info-container__close svg path {
-    fill: #EFE9DD; }
+    fill: #ece7e4; }
 
 li.info-element {
   display: none; }
 
 section.band {
-  background-color: #EFE9DD;
+  background-color: #ece7e4;
   width: 100%;
-  padding: 2em; }
+  padding: 1.666em 2em 2em 2em; }
 
 section.bio p:last-child {
   margin-bottom: 0; }

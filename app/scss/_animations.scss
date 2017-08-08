@@ -49,16 +49,16 @@
 
 @keyframes colorChange {
   0% {
-    background-color: $start;
+    background-color: $tone1;
   }
   25% {
-    background-color: $middle;
+    background-color: $tone2;
   }
   75% {
-    background-color: $end;
+    background-color: $tone3;
   }
   100% {
-    background-color: $start;
+    background-color: $tone1;
   }
 }
 

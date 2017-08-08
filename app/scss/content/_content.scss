@@ -1,8 +1,8 @@
 section.band {
-  background-color: $stone;
+  background-color: $tone0;
   width: 100%;
   // position: relative;
-  padding: 2em;
+  padding: 1.666em 2em 2em 2em;
 }
 
 section.bio {
@@ -18,7 +18,7 @@ ul.social {
       height: auto;
       margin-right: 1em;
       path {
-        fill: $blue;
+        fill: $tone3;
       }
       transition: all 0.25s ease;
     }
