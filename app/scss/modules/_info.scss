@@ -25,18 +25,21 @@
     opacity: 1;
   }
   h2 {
-    color: $tone1;
+    color: $tone0;
   }
   p {
-    color: $stone;
+    color: $tone0;
   }
 }
 .info-container__close {
+  border-bottom: none;
+  width: 100%;
+  background-color: $tone2;
   svg {
     width: 1em;
     height: auto;
     path {
-      fill: $stone;
+      fill: $tone1;
     }
   }
 }

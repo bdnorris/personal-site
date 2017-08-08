@@ -563,7 +563,7 @@ body {
   font-family: "skolar-sans-latin", sans-serif;
   font-size: 16px;
   margin: 0;
-  background-color: #ece7e4;
+  background: #f1ede4 url("../images/stardust.png") repeat top left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -685,13 +685,13 @@ button, input[type='submit'] {
 
 @keyframes colorChange {
   0% {
-    background-color: #DB9075; }
-  25% {
     background-color: #edd2aa; }
+  25% {
+    background-color: #DB9075; }
   75% {
     background-color: #808A8C; }
   100% {
-    background-color: #DB9075; } }
+    background-color: #edd2aa; } }
 
 @keyframes rotateB {
   0% {
@@ -904,7 +904,7 @@ header {
       flex-flow: row nowrap; } }
 
 .paper {
-  background-color: #DB9075;
+  background-color: #edd2aa;
   overflow: hidden;
   position: relative;
   -ms-flex: 0 0 36vw;
@@ -914,12 +914,14 @@ header {
     .paper div img#doodle-holder {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 32vw;
       opacity: 0;
-      padding: 1em;
-      left: 32vw; }
+      padding: 1em; }
       .paper div img#doodle-holder.on {
         animation: fadeIn 0.25s linear 0.4s 1 alternate forwards; }
+      @media screen and (min-width: 48em) {
+        .paper div img#doodle-holder {
+          left: 0; } }
     .paper div:hover {
       animation-play-state: paused;
       cursor: default; }
@@ -950,7 +952,7 @@ header {
 .masthead {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  background: #edd2aa;
+  background: #DB9075;
   padding: 2.25em 2em 1.75em 2em;
   color: #6E605D; }
   .masthead h1 {
@@ -963,7 +965,7 @@ header {
   .masthead h2 {
     font-size: 2em;
     height: 1.2em;
-    color: #DB9075;
+    color: #edd2aa;
     padding: 0;
     margin: 0; }
   .masthead h2.swap {
@@ -1182,7 +1184,7 @@ button.hamburger {
 .info-container {
   background-color: #808A8C;
   opacity: 0;
-  color: #DB9075;
+  color: #edd2aa;
   transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
   position: fixed;
   top: 0;
@@ -1196,21 +1198,24 @@ button.hamburger {
     transform: scale(1);
     opacity: 1; }
   .info-container h2 {
-    color: #DB9075; }
+    color: #f1ede4; }
   .info-container p {
-    color: #ece7e4; }
+    color: #f1ede4; }
 
-.info-container__close svg {
-  width: 1em;
-  height: auto; }
-  .info-container__close svg path {
-    fill: #ece7e4; }
+.info-container__close {
+  border-bottom: none;
+  width: 100%;
+  background-color: #DB9075; }
+  .info-container__close svg {
+    width: 1em;
+    height: auto; }
+    .info-container__close svg path {
+      fill: #edd2aa; }
 
 li.info-element {
   display: none; }
 
 section.band {
-  background-color: #ece7e4;
   width: 100%;
   padding: 1.666em 2em 2em 2em; }
 
