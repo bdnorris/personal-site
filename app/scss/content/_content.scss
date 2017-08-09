@@ -19,12 +19,13 @@ ul.social {
       margin-right: 1em;
       path {
         fill: $tone3;
+        transition: fill 0.25s ease;
       }
-      transition: all 0.25s ease;
+
     }
     &:hover {
       svg path {
-        fill: $gray;
+        fill: $tone2;
       }
     }
   }

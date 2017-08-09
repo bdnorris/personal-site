@@ -645,11 +645,24 @@ button, input[type='submit'] {
   font-weight: 300;
   padding: 0;
   color: #6E605D;
-  transition: color 0.5s ease, border 0.5s ease;
-  border-bottom: 1px dashed transparent; }
+  transition: color 0.5s ease, letter-spacing 0.5s ease;
+  position: relative;
+  overflow: hidden; }
+  button::after, input[type='submit']::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background-color: #edd2aa;
+    transition: left 0.5s ease; }
   button:hover, button:focus, input[type='submit']:hover, input[type='submit']:focus {
     color: #5b6364;
-    border-bottom: 1px dashed #5b6364; }
+    letter-spacing: 0.01em; }
+    button:hover::after, button:focus::after, input[type='submit']:hover::after, input[type='submit']:focus::after {
+      left: 0; }
 
 @keyframes fadeInRight {
   from {
@@ -682,6 +695,17 @@ button, input[type='submit'] {
     opacity: 0.5; }
   100% {
     opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @keyframes colorChange {
   0% {
@@ -958,7 +982,9 @@ header {
   .masthead h1 {
     color: #6E605D;
     padding: 0;
-    margin: 0 0 0.5em 0; }
+    margin: 0 0 0.5em 0;
+    animation: fadeInUp 0.75s linear;
+    transform: translate(0 0); }
     @media screen and (min-width: 48em) {
       .masthead h1 {
         margin: 0; } }
@@ -1225,13 +1251,13 @@ section.bio p:last-child {
 ul.social a svg {
   width: 40px;
   height: auto;
-  margin-right: 1em;
-  transition: all 0.25s ease; }
+  margin-right: 1em; }
   ul.social a svg path {
-    fill: #808A8C; }
+    fill: #808A8C;
+    transition: fill 0.25s ease; }
 
 ul.social a:hover svg path {
-  fill: #928A87; }
+  fill: #DB9075; }
 
 .stage {
   background: rgba(128, 0, 128, 0.85) url(../images/bg_img.png) no-repeat center center;
