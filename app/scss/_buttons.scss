@@ -1,0 +1,39 @@
+// GLOBAL Button styles
+
+button, input[type='submit'] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "skolar-sans-latin", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  padding: 0;
+  color: $text;
+  transition: color 0.5s ease, letter-spacing 0.5s ease;
+  // display: inline-block;
+  // margin-bottom: 0.2em;
+  // border-bottom: 1px solid transparent;
+  // padding-bottom: 0.1em;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background-color: $tone1;
+    transition: left 0.5s ease;
+  }
+  &:hover, &:focus {
+    color: darken($tone3, 15%);
+    // border-bottom: 1px solid darken($tone3, 15%);
+    letter-spacing: 0.01em;
+    &::after {
+      left: 0;
+    }
+
+  }
+}

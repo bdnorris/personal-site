@@ -1,0 +1,32 @@
+section.band {
+  // background-color: $tone0;
+  width: 100%;
+  // position: relative;
+  padding: 1.666em 2em 2em 2em;
+}
+
+section.bio {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul.social {
+  a {
+    svg {
+      width: 40px;
+      height: auto;
+      margin-right: 1em;
+      path {
+        fill: $tone3;
+        transition: fill 0.25s ease;
+      }
+
+    }
+    &:hover {
+      svg path {
+        fill: $tone2;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.stage {
+  background: rgba($purple, 0.85) url(../images/bg_img.png) no-repeat center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.form-lockup {
+  flex: 0 0 auto;
+  max-width: 100%;
+  @include breakpoint(medium up) {
+    width: 320px;
+  }
+    a.identity {
+      display: block;
+      svg {
+        // height: auto; DOESN'T WORK IN WEBKIT (THE NEW IE)
+        @include responsive-svg(117px, 179px, 177px);
+      }
+      // Proof of concept, logo color schemes in CSS
+      svg .primary {
+        fill: $tone3;
+      }
+      svg .secondary {
+        fill: $red;
+      }
+    }
+    form {
+      // flex: 0 0 auto;
+      margin: 2em auto;
+    }
+}

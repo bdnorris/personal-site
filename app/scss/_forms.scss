@@ -1,0 +1,104 @@
+// GLOBAL Form Styles
+
+form {
+  text-align: left;
+  a {
+    display: block;
+    font-size: 14px;
+    margin-top: 0.666em;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  color: white;
+  display: block;
+  // margin-bottom: 0.5em;
+  font-size: 14px;
+  line-height: 1.215;
+}
+
+button.button, input[type='submit'] {
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label.label-with-toggle {
+  float: left;
+}
+
+button#togglepw {
+  float: right;
+  color: $tone3;
+  font-size: 14px;
+  padding: 0;
+  position: relative;
+  top: -1px;
+  // line-height: 1.2;
+  // margin-bottom: 1px;
+  span {
+    position: relative;
+    top: -4px;
+    width: 2.666em;
+    display: inline-block;
+    text-align: right;
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+svg.eye-with-line {
+  display: none;
+}
+svg.eye {
+  // position: relative;
+  // top: -2px;
+}
+
+
+input {
+  width: 100%;
+  margin: 0.5em auto;
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  box-sizing: border-box;
+  padding: 1em;
+  font-size: 14px;
+  line-height: 1.215;
+  background-color: rgba(255,255,255,0.3);
+  &:focus, &.typed {
+    background-color: rgba(255,255,255,1);
+  }
+}
+
+label span {
+  display: inline-block;
+  position: relative;
+}
+label span.error {
+  // text-align: right;
+  // float: right;
+  transition: transform 1s ease;
+  transform: translateX(100px);
+  color: $red;
+}
+label span.error-label {
+  transform: translateX(0px);
+}
+
+input.error-input {
+  border: 1px solid $red;
+}

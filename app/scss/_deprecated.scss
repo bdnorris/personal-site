@@ -1,0 +1,142 @@
+$dirt: #5a5c51;
+$salmon: #ba9077;
+$sky: #bcd5d1;
+
+
+$fresh: #4abdac;
+$vermillion: #FC4A1A;
+$sunshine: #F78733;
+$clean: #DFDCE3;
+
+$gold: #C0B283;
+$silk: #DCD0C0;
+$paper: #F4F4F4;
+$charcoal: #373737;
+
+$dusty: #96858F;
+$lavendar: #6d7993;
+$overcast: #9099a2;
+$paper2: #D5D5D5;
+
+$beige: #EAE7DC;
+$clay: #D8C3A5;
+$gray3: #8E8D8A;
+$rose: #E98074;
+$red: #E85A4F;
+
+$sea: #026670;
+$foam: #9FEDD7;
+$lemon: #FEF9C7;
+$banana: #FCE181;
+$silver: #EDEAE5;
+
+$rust: #B56357;
+$mint: #b4dbc0;
+$slate: #eae3ea;
+$seafoam: #a7b3a5;
+
+$salmon: #fa7c92;
+$rain: #6ec4db;
+$buttermilk: #fff7c0;
+$leaf: #66ab8c;
+
+$greyblue: #a9b7c0;
+$minty: #c7d8c6;
+$light: #efd9c1;
+$powder: #cccbc6;
+
+$blueberry: #6b7a8f;
+$apricot: #f7882f;
+$citrus: #f7c331;
+$applecore: #dcc7aa;
+
+$navy: #0f1626;
+$leather: #ab987a;
+$coral: #ff533d;
+$eggshell: #f5f5f5;
+
+// Named by Shade
+$green:  #99B898;
+$peach:  #FECEA8;
+$pink:   #FF847C;
+$red:    #E84A5F;
+
+$pale: #ede9ce;
+$tan: #c7ad88;
+$slate: #64706c;
+$verm: #935347;
+
+$summersky: #286DA8;
+$warmpeach: #CD5360;
+$field: #b37D4e;
+$breeze: #438496;
+
+$fresh: #f7ef6a;
+$leafy: #93c178;
+$skies: #465c85;
+$cleaner: #dfdce3;
+
+$matte: #414141;
+$fresh: #ccdfcb;
+$watermelon: #ff6a5c;
+$teal: #056571;
+
+$powderblue: #4abdac;
+$cotton: #99ced4;
+$blush: #eeb6b7;
+$smoke: #6e7376;
+
+
+
+// h2.morph {
+//   dl {
+//     display: inline-block;
+//     position: relative;
+//     height: $anim-height;
+//     top: 41px;
+//     // left: 0;
+//     // width: $anim-width;
+//     margin-top: -1.5em;
+//     // background-color: teal;
+//     animation: flip-horizontal-bottom 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate forwards;
+//     transform-style: preserve-3d;
+//     &:hover {
+//       animation-play-state: paused;
+//     }
+//   }
+//   dt {
+//     transform: translate3d(0,0,0);
+//     transform-style: preserve-3d;
+//     background-color: yellow;
+//     position: absolute;
+//     backface-visibility: hidden;
+//     top: 0;
+//     display: block;
+//     height: $anim-height;
+//     overflow: hidden;
+//     // width: $anim-width;
+//     // transition: all 1s ease;
+//
+//     &:last-child {
+//       background-color: yellow;
+//       transform: rotateX(180deg);
+//       backface-visibility: hidden;
+//       display: block;
+//       top: 0;
+//       height: $anim-height;
+//       overflow: hidden;
+//       // top: -0.2em
+//       // position: absolute;
+//       // top: 0;
+//       // top: 1em;
+//       // animation-name: fadeInOut;
+//       // animation-delay: 0;
+//       // animation-direction: normal;
+//       // animation-duration: 2s;
+//       // animation-fill-mode: forwards;
+//       // animation-iteration-count: infinite;
+//       // animation-timing-function: ease;
+//       // animation-play-state: running;
+//     }
+//   }
+// }

@@ -1,0 +1,27 @@
+// Styles for HTML and BODY and things that get inherited down
+
+/* BOX MODEL SETTING FOR ALL ELEMENTS BY DEFAULT
+THIS IS BETTER THAN DEFAULT, YOU SHOULD ALWAYS USE THIS:
+*/
+// ***
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* END BOX MODEL SETTINGS */
+
+body {
+  // font-family: 'Zilla Slab', serif;
+  // font-family: 'Volkhov', serif;
+  font-family: "skolar-sans-latin", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: $tone0 url('../images/stardust.png') repeat top left;
+  // padding: 2em;
+  // ***
+  // Makes font weights more consistent
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,27 @@
+// Custom mixins written by me for this project.
+
+@mixin responsive-svg($base-height, $base-width, $desired-width) {
+  width: $desired-width;
+  height: (($desired-width * $base-height) / $base-width);
+  // height: auto; DOESN'T WORK IN WEBKIT (THE NEW IE)
+}
+
+@mixin shift($direction, $offset) {
+  position: relative;
+  @if ($direction == up) {
+    top: -$offset; // move
+    margin-bottom: -$offset; // and compensate
+  }
+  @if ($direction == down) {
+    bottom: -$offset; // move
+    margin-top: -$offset; // and compensate
+  }
+  @if ($direction == left) {
+    left: -$offset; // move
+    margin-left: -$offset; // and compensate
+  }
+  @if ($direction == right) {
+    right: -$offset; // move
+    margin-right: -$offset; // and compensate
+  }
+}
