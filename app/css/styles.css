@@ -982,9 +982,7 @@ header {
   .masthead h1 {
     color: #6E605D;
     padding: 0;
-    margin: 0 0 0.5em 0;
-    animation: fadeInUp 0.75s linear;
-    transform: translate(0 0); }
+    margin: 0 0 0.5em 0; }
     @media screen and (min-width: 48em) {
       .masthead h1 {
         margin: 0; } }
@@ -1218,7 +1216,7 @@ button.hamburger {
   bottom: 0;
   transform: scale(0.5);
   width: 80vw;
-  padding: 2em; }
+  padding: 0; }
   .info-container + .side-closer {
     display: block;
     width: 20vw;
@@ -1241,12 +1239,28 @@ button.hamburger {
 .info-container__close {
   border-bottom: none;
   width: 100%;
-  background-color: #DB9075; }
+  height: 2.75em;
+  background-color: #4f5657;
+  padding: 0.75em 0.75em 0.75em 1.5em;
+  text-align: left;
+  border: none;
+  transition: height 0.5s ease, padding 0.5s ease; }
+  .info-container__close::after {
+    display: none; }
   .info-container__close svg {
-    width: 1em;
-    height: auto; }
+    width: 1.25em;
+    height: 1.25em; }
     .info-container__close svg path {
+      transition: fill 0.5s ease;
+      fill: #808A8C; }
+  .info-container__close:hover {
+    height: 3em;
+    padding-top: 0.9em; }
+    .info-container__close:hover svg path {
       fill: #edd2aa; }
+
+.info-container__sub-container {
+  padding: 2em; }
 
 li.info-element {
   display: none; }

@@ -139,6 +139,9 @@ var wrapImg = function (direction, element, frameHeight) {
 };
 
 
+
+
+
 $(document).ready(function(){
 
   $("[data-subject]").each(function(index, element) {
@@ -226,5 +229,6 @@ $(document).ready(function(){
   // var mailText = $('#obfuscated').html();
   // mailText = atob(mailText);
   // $('#obfuscated').html(mailText);
+
 
 });
