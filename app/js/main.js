@@ -171,7 +171,7 @@ $(document).ready(function(){
     }
   });
 
-  $(document).on('click', '.info-container__close', function() {
+  $('body').on('click', '.info-container__close, .side-closer', function() {
     for (var i = 0, count = infoElements.length ; i < count ; i++) {
       // if (infoLabel === infoElements[i].label) {
         infoElements[i].close('.info-container');
@@ -179,7 +179,7 @@ $(document).ready(function(){
     }
   });
 
-  $(document).on('transitionend', '.info-container', function() {
+  $('body').on('transitionend', '.info-container', function() {
     if($('.info-container').css('opacity') == 0) {
       $('.info-container__sub-container').html('');
     }

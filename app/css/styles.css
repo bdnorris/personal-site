@@ -1219,10 +1219,20 @@ button.hamburger {
   transform: scale(0.5);
   width: 80vw;
   padding: 2em; }
+  .info-container + .side-closer {
+    display: block;
+    width: 20vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    background-color: transparent; }
   .info-container.on {
     left: 20vw;
     transform: scale(1);
     opacity: 1; }
+    .info-container.on + .side-closer {
+      left: 0; }
   .info-container h2 {
     color: #f1ede4; }
   .info-container p {

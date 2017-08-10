@@ -18,11 +18,23 @@
   transform: scale(0.5);
   width: 80vw;
   padding: 2em;
+  & + .side-closer {
+    display: block;
+    width: 20vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    background-color: transparent;
+  }
   &.on {
     left: 20vw;
     // height: 100vw;
     transform: scale(1);
     opacity: 1;
+    & + .side-closer {
+      left: 0;
+    }
   }
   h2 {
     color: $tone0;
