@@ -13,6 +13,11 @@ $anim-width: 4.5em;
 //   position: relative;
 // }
 
+header {
+  background-color: $tone2;
+  padding-bottom: 1.333em;
+}
+
 .paper {
   background-color: transparent;
   // background-image: url(/images/LayeredPaperBall_reel_color.png);
@@ -96,17 +101,21 @@ $anim-width: 4.5em;
   padding: 2.25em 2em 1.75em 2em;
   color: $text;
   h1 {
-    color: $tone1;
+    color: darken($tone2, 10%);
+    font-size: 8em;
     padding: 0;
+    font-weight: 200;
     margin: 0 0 0.5em 0;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
     @include breakpoint(medium up) {
       margin: 4vw 0 0.5em 0;
     }
   }
   h2 {
-    font-size: 2em;
+    font-size: 2.333em;
     height: $anim-height;
-    color: $tone0;
+    color: $tone1;
     padding: 0;
     margin: 0;
   }
@@ -119,8 +128,8 @@ $anim-width: 4.5em;
       // position: absolute;
       // left: 2em;
       // top: 0;
-      filter: blur(6px);
-      opacity: 0.4;
+      filter: blur(4px);
+      opacity: 0.5;
       transition: filter 0.5s linear, opacity 0.75s ease;
       &.on {
         opacity: 1;
