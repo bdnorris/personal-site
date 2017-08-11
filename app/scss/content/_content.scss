@@ -4,9 +4,12 @@ section.band {
   // position: relative;
 position: relative;
   // text-align: center;
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 1em;
+
+  // margin-top: 1em;
+  @include breakpoint(medium up) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }
 
 // section.bio {
@@ -16,14 +19,25 @@ position: relative;
 // }
 
 .half {
-  flex: 1 1 50vw;
-  width: 50vw;
+  // flex: 1 1 50vw;
+  // width: 50vw;
   background-color: $tone0;
-  padding: 1.666em 2em 2em 2em;
+  padding: 2.666em 2em 2em 2em;
+  @include breakpoint(medium up) {
+    flex: 1 1 50vw;
+    width: 50vw;
+    background-color: $tone0;
+    padding: 2.666em 2em 2em 2em;
+  }
+
+
 }
 
 ul.social {
   a {
+    &::after {
+      display: none; // kill button effects
+    }
     svg {
       width: 40px;
       height: auto;
@@ -35,8 +49,12 @@ ul.social {
 
     }
     &:hover {
+      border: none;
       svg path {
-        fill: $tone2;
+        fill: $text;
+      }
+      &::after {
+        display: none; // kill button effects
       }
     }
   }

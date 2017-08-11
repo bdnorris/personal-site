@@ -1,6 +1,6 @@
 // GLOBAL Button styles
 
-button, input[type='submit'] {
+button, input[type='submit'], a {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -8,7 +8,7 @@ button, input[type='submit'] {
   font-size: 1.4em;
   font-weight: 300;
   padding: 0;
-  color: $text;
+  color: lighten($tone3, 10%);
   transition: color 0.5s ease, letter-spacing 0.5s ease;
   // display: inline-block;
   // margin-bottom: 0.2em;
@@ -24,11 +24,11 @@ button, input[type='submit'] {
     left: -100%;
     height: 2px;
     width: 100%;
-    background-color: $tone1;
+    background-color: lighten($tone3, 10%);
     transition: left 0.5s ease;
   }
   &:hover, &:focus {
-    color: darken($tone3, 15%);
+    color: $text;
     // border-bottom: 1px solid darken($tone3, 15%);
     letter-spacing: 0.01em;
     &::after {

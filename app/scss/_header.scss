@@ -35,7 +35,7 @@ header {
     img#doodle-holder {
       position: absolute;
       top: 0;
-      left: 32vw;
+      // left: 32vw;
       opacity: 0;
       padding: 1em;
       // transition: opacity 1s ease;
@@ -54,9 +54,21 @@ header {
       // }
     }
   }
+  height: 22vw;
+  margin: 0 auto;
+  width: 22vw;
+  div {
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+    }
+  }
 
   @include breakpoint(small) {
-    flex: 0 0 36vw;
+    // flex: 0 0 36vw;
     // position: absolute;
     // height: 100px;
     // width: 100px;
@@ -64,33 +76,23 @@ header {
     // right: 0;
     div {
       img {
-        position: absolute;
-        top: 0;
-        left: 32vw;
-        width: 36vw;
-        height: auto;
-        margin: 0 auto;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 36vw;
+        // height: auto;
+        // margin: 0 auto;
       }
     }
   }
   @include breakpoint(medium up) {
     // flex: 0 0 22vw;
-    height: 22vw;
-    margin: 0 auto;
-    width: 22vw;
+
     max-width: 200px;
     max-height: 200px;
     // position: static;
     flex-flow: row nowrap;
-    div {
-      img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0;
-        left: 0;
-      }
-    }
+
   }
 } // .paper
 
@@ -118,10 +120,15 @@ header {
     color: $tone1;
     padding: 0;
     margin: 0;
+    font-weight: 700;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
+    // font-family: "skolar-latin",serif;
   }
 
   h2.swap {
     position: relative;
+    font-weight: 300;
     span {
       // display: none;
       display: inline-block;
