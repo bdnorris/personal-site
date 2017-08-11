@@ -61,9 +61,22 @@ var randomDoodles = [
   'web.png'
 ];
 
-for (let i = 0; i <= randomDoodles.length; i++) {
+for (let i = 0; i < randomDoodles.length; i++) {
     $('body').append('<img src="/images/doodles/'+randomDoodles[i]+'" style="display:none;">');
 }
+
+// var images = new Array();
+// function preload() {
+// 	for (let i = 0; i < preload.arguments.length; i++) {
+// 		images[i] = new Image()
+// 		images[i].src = preload.arguments[i]
+// 	}
+// }
+//
+//   for (let i = 0; i < randomDoodles.length; i++) {
+//     preload('/images/doodles/'+randomDoodles[i]);
+//   }
+
 
 //  paper element
 var element = document.getElementById('paper');
@@ -140,8 +153,6 @@ var wrapImg = function (direction, element, frameHeight) {
 
 
 
-
-
 $(document).ready(function(){
 
   $("[data-subject]").each(function(index, element) {
@@ -174,7 +185,7 @@ $(document).ready(function(){
     }
   });
 
-  $('body').on('click', '.info-container__close, .side-closer', function() {
+  $('body').on('click', '.info-container__close', function() {
     for (var i = 0, count = infoElements.length ; i < count ; i++) {
       // if (infoLabel === infoElements[i].label) {
         infoElements[i].close('.info-container');

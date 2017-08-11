@@ -2,13 +2,24 @@ section.band {
   // background-color: $tone0;
   width: 100%;
   // position: relative;
-  padding: 1.666em 2em 2em 2em;
+position: relative;
+  // text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 1em;
 }
 
-section.bio {
-  p:last-child {
-    margin-bottom: 0;
-  }
+// section.bio {
+//   p:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+
+.half {
+  flex: 1 1 50vw;
+  width: 50vw;
+  background-color: $tone0;
+  padding: 1.666em 2em 2em 2em;
 }
 
 ul.social {

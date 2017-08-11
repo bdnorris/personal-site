@@ -7,35 +7,41 @@
   // display: none;
   opacity: 0;
   color: $tone1;
-  transition:
-    opacity 0.5s ease,
-    transform 0.4s ease-in,
-    left 0.4s ease-in;
-  position: fixed;
+  transition: opacity 0.5s ease, transform 0.4s ease-in, bottom 0.4s ease-in, height 0.5s ease;
+  position: absolute;
   top: 0;
-  left: 100vw;
-  bottom: 0;
+  // left: 100vw;
+  right: 0;
+  bottom: -100vh;
   transform: scale(0.5);
   width: 80vw;
   padding: 0;
-  & + .side-closer {
-    display: block;
-    width: 20vw;
-    height: 100vw;
-    position: absolute;
-    top: 0;
-    left: 100vw;
-    background-color: transparent;
-  }
+  height: 0;
   &.on {
-    left: 20vw;
+    bottom: 0;
+    top: 0;
+    // display: block;
     // height: 100vw;
+    // position: absolute;
     transform: scale(1);
     opacity: 1;
-    & + .side-closer {
-      left: 0;
-    }
+    height: auto;
+    // & + .side-closer {
+    //   left: 0;
+    //   display: block;
+    // }
   }
+  // & + .side-closer {
+  //   display: none;
+  //   // background-color: pink;
+  //   width: 20vw;
+  //   // height: 100vw;
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 100vw;
+  //   background-color: transparent;
+  // }
   h2 {
     color: $tone0;
   }
@@ -51,6 +57,7 @@
   padding: 0.75em 0.75em 0.75em 1.5em;
   text-align: left;
   border: none;
+  cursor: pointer;
   transition: height 0.5s ease, padding 0.5s ease;
   &::after {
     display: none;
@@ -85,7 +92,7 @@
   // }
 }
 
-li.info-element {
+.info-element {
   display: none;
   // opacity: 0;
   // transition: opacity 1s ease;

@@ -2,19 +2,19 @@
 
 $anim-height: 1.2em;
 $anim-width: 4.5em;
-header {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  @include breakpoint(medium up) {
-    flex-flow: row nowrap;
-  }
-  position: relative;
-}
+// header {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: space-between;
+//   align-items: stretch;
+//   @include breakpoint(medium up) {
+//     flex-flow: row nowrap;
+//   }
+//   position: relative;
+// }
 
 .paper {
-  background-color: $tone1;
+  background-color: transparent;
   // background-image: url(/images/LayeredPaperBall_reel_color.png);
   // background-size: 100%;
   // color: $tone2;
@@ -69,8 +69,9 @@ header {
     }
   }
   @include breakpoint(medium up) {
-    flex: 0 0 22vw;
+    // flex: 0 0 22vw;
     height: 22vw;
+    margin: 0 auto;
     width: 22vw;
     max-width: 200px;
     max-height: 200px;
@@ -89,22 +90,23 @@ header {
 } // .paper
 
 .masthead {
-  flex: 1 1 auto;
+  // flex: 1 1 auto;
+  text-align: center;
   background: $tone2;
   padding: 2.25em 2em 1.75em 2em;
   color: $text;
   h1 {
-    color: $text;
+    color: $tone1;
     padding: 0;
     margin: 0 0 0.5em 0;
     @include breakpoint(medium up) {
-      margin: 0;
+      margin: 4vw 0 0.5em 0;
     }
   }
   h2 {
     font-size: 2em;
     height: $anim-height;
-    color: $tone1;
+    color: $tone0;
     padding: 0;
     margin: 0;
   }
@@ -114,11 +116,11 @@ header {
     span {
       // display: none;
       display: inline-block;
-      position: absolute;
-      left: 2em;
-      top: 0;
+      // position: absolute;
+      // left: 2em;
+      // top: 0;
       filter: blur(6px);
-      opacity: 0;
+      opacity: 0.4;
       transition: filter 0.5s linear, opacity 0.75s ease;
       &.on {
         opacity: 1;
