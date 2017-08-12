@@ -576,7 +576,7 @@ h1 {
   line-height: 1.185;
   font-weight: 400;
   margin: 0 0 0.8rem 0;
-  font-family: "skolar-latin",serif;
+  font-family: "skolar-latin", serif;
   font-weight: 600;
   line-height: 0.9; }
   @media screen and (min-width: 48em) {
@@ -604,7 +604,7 @@ h3 {
   margin: 0 0 0.25em 0;
   line-height: 1.185;
   text-transform: uppercase;
-  font-family: "skolar-latin",serif;
+  font-family: "skolar-latin", serif;
   letter-spacing: 0.1333em; }
 
 p {
@@ -817,6 +817,52 @@ button, input[type='submit'], a {
     animation-timing-function: ease-out;
     opacity: 1; } }
 
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1; }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in; }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; }
+  81% {
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in; }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in; }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out; } }
+
 form {
   text-align: left; }
   form a {
@@ -926,7 +972,8 @@ header {
   margin: 0 auto;
   width: 22vw; }
   .paper div {
-    transform-origin: top center; }
+    transform-origin: top center;
+    animation: wobble-hor-bottom 2s ease infinite alternate both; }
     .paper div img#doodle-holder {
       position: absolute;
       top: 0;
@@ -963,7 +1010,8 @@ header {
     font-size: 8em;
     padding: 0;
     font-weight: 200;
-    margin: 0 0 0.5em 0; }
+    margin: 0 0 0.5em 0;
+    animation: bounce-in-top 2s ease 3s 1 alternate both; }
     @media screen and (min-width: 48em) {
       .masthead h1 {
         margin: 4vw 0 0.5em 0; } }

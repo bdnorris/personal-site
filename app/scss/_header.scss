@@ -31,7 +31,7 @@ header {
   div {
     transform-origin: top center;
     // transform: rotate(0);
-    // animation: wobble-hor-bottom 2s ease infinite alternate both;
+    animation: wobble-hor-bottom 2s ease infinite alternate both;
     img#doodle-holder {
       position: absolute;
       top: 0;
@@ -113,6 +113,7 @@ header {
     @include breakpoint(medium up) {
       margin: 4vw 0 0.5em 0;
     }
+    animation: bounce-in-top 2s ease 3s 1 alternate both;
   }
   h2 {
     font-size: 2.333em;
