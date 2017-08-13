@@ -572,7 +572,7 @@ h1, h2, h3, h4, h5, h6, p {
   color: #f1ede4; }
 
 h1 {
-  font-size: 48px;
+  font-size: 5em;
   line-height: 1.185;
   font-weight: 400;
   margin: 0 0 0.8rem 0;
@@ -581,13 +581,13 @@ h1 {
   line-height: 0.9; }
   @media screen and (min-width: 48em) {
     h1 {
-      font-size: 68px; } }
+      font-size: 6em; } }
   @media screen and (min-width: 67.5em) {
     h1 {
-      font-size: 86px; } }
+      font-size: 8em; } }
 
 h2 {
-  font-size: 22px;
+  font-size: 1.666em;
   line-height: 1.185;
   font-weight: 400;
   margin: 0.333em 0; }
@@ -641,11 +641,15 @@ ul.horz-list li {
 button, input[type='submit'], a {
   background-color: transparent;
   border: none;
+  display: inline-block;
   cursor: pointer;
+  text-align: left;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
   font-family: "skolar-sans-latin", sans-serif;
   font-size: 1.4em;
   font-weight: 300;
-  padding: 0;
+  padding: 0 0 0.75em 0;
   color: #9ed8e0;
   transition: color 0.5s ease, letter-spacing 0.5s ease;
   position: relative;
@@ -654,7 +658,7 @@ button, input[type='submit'], a {
     content: '';
     display: block;
     position: relative;
-    bottom: 0;
+    bottom: -6px;
     left: -100%;
     height: 2px;
     width: 100%;
@@ -968,9 +972,9 @@ header {
   background-color: transparent;
   overflow: hidden;
   position: relative;
-  height: 22vw;
   margin: 0 auto;
-  width: 22vw; }
+  height: 42vw;
+  width: 42vw; }
   .paper div {
     transform-origin: top center;
     animation: wobble-hor-bottom 2s ease infinite alternate both; }
@@ -987,6 +991,14 @@ header {
     .paper div:hover {
       animation-play-state: paused;
       cursor: default; }
+  @media screen and (min-width: 48em) {
+    .paper {
+      height: 32vw;
+      width: 32vw; } }
+  @media screen and (min-width: 67.5em) {
+    .paper {
+      height: 22vw;
+      width: 22vw; } }
   .paper div img {
     position: absolute;
     width: 100%;
@@ -1002,22 +1014,18 @@ header {
 
 .masthead {
   text-align: center;
-  background: #DB9075;
   padding: 2.25em 2em 1.75em 2em;
   color: #f1ede4; }
   .masthead h1 {
     color: #d06f4d;
-    font-size: 8em;
     padding: 0;
     font-weight: 200;
     margin: 0 0 0.5em 0;
-    animation: bounce-in-top 2s ease 3s 1 alternate both; }
+    animation: fadeIn 2s linear 3s 1 alternate both; }
     @media screen and (min-width: 48em) {
       .masthead h1 {
         margin: 4vw 0 0.5em 0; } }
   .masthead h2 {
-    font-size: 2.333em;
-    height: 1.2em;
     color: #edd2aa;
     padding: 0;
     margin: 0;
@@ -1234,7 +1242,7 @@ button.hamburger {
       display: none; } }
 
 .info-container {
-  background-color: #77C9D4;
+  background: #77C9D4 url(../images/paper_texture.png) repeat center top;
   opacity: 0;
   color: #edd2aa;
   transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
@@ -1298,7 +1306,7 @@ section.band {
       flex-flow: row nowrap; } }
 
 .half {
-  background-color: #808A8C;
+  background: #808A8C url(../images/paper_texture.png) repeat center top;
   padding: 2.666em 2em 2em 2em; }
   @media screen and (min-width: 48em) {
     .half {

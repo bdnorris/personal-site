@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size:   48px;
+  font-size:   5em;
   line-height: 1.185; // unit-less line-height to keep it flexible
   font-weight: 400; // Roman/Regular
   margin: 0 0 0.8rem 0; // 1rem for 16pt
@@ -13,15 +13,15 @@ h1 {
   font-weight: 600;
   line-height: 0.9;
   @include breakpoint(medium) {
-    font-size: 68px;
+    font-size: 6em;
   }
   @include breakpoint(large up) {
-    font-size: 86px;
+    font-size: 8em;
   }
 }
 
 h2 {
-  font-size:   22px;
+  font-size:   1.666em;
   line-height: 1.185;
   font-weight: 400; // Roman/Regular
   margin: 0.333em 0;

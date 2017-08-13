@@ -21,7 +21,8 @@ position: relative;
 .half {
   // flex: 1 1 50vw;
   // width: 50vw;
-  background-color: $tone0;
+  // background-color: $tone0;
+  background: $tone0 url(../images/paper_texture.png) repeat center top;
   padding: 2.666em 2em 2em 2em;
   @include breakpoint(medium up) {
     flex: 1 1 50vw;

@@ -3,7 +3,8 @@
 }
 
 .info-container {
-  background-color: $tone3;
+  // background-color: $tone3;
+  background: $tone3 url(../images/paper_texture.png) repeat center top;
   // display: none;
   opacity: 0;
   color: $tone1;

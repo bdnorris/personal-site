@@ -14,6 +14,7 @@ $anim-width: 4.5em;
 // }
 
 header {
+  // background: $tone2 url(../images/paper_texture.png) repeat center top;
   background-color: $tone2;
   padding-bottom: 1.333em;
 }
@@ -54,9 +55,17 @@ header {
       // }
     }
   }
-  height: 22vw;
   margin: 0 auto;
-  width: 22vw;
+  height: 42vw;
+  width: 42vw;
+  @include breakpoint (medium) {
+    height: 32vw;
+    width: 32vw;
+  }
+  @include breakpoint (large up) {
+    height: 22vw;
+    width: 22vw;
+  }
   div {
     img {
       position: absolute;
@@ -99,12 +108,12 @@ header {
 .masthead {
   // flex: 1 1 auto;
   text-align: center;
-  background: $tone2;
+  // background: $tone2;
   padding: 2.25em 2em 1.75em 2em;
   color: $text;
   h1 {
     color: darken($tone2, 10%);
-    font-size: 8em;
+    // font-size: 8em;
     padding: 0;
     font-weight: 200;
     margin: 0 0 0.5em 0;
@@ -113,11 +122,11 @@ header {
     @include breakpoint(medium up) {
       margin: 4vw 0 0.5em 0;
     }
-    animation: bounce-in-top 2s ease 3s 1 alternate both;
+    animation: fadeIn 2s linear 3s 1 alternate both;
   }
   h2 {
-    font-size: 2.333em;
-    height: $anim-height;
+    // font-size: 2.333em;
+    // height: $anim-height;
     color: $tone1;
     padding: 0;
     margin: 0;
