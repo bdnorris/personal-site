@@ -14,7 +14,9 @@ $anim-width: 4.5em;
 // }
 
 header {
-  background: $tone2 url(../images/Crumpled_sm.png) repeat center top;
+  // background: $tone2 url(../images/Crumpled_sm.png) repeat center top;
+  background: $tone2 url(../images/FullPaper.jpg) no-repeat center center;
+  background-size: cover;
   background-attachment: fixed;
   // background-color: $tone2;
   padding-bottom: 1.333em;
@@ -26,19 +28,25 @@ header {
   // background: $tone2;
   padding: 2.25em 2em 1.75em 2em;
   color: $text;
-  h1 {
-    color: darken($tone2, 12%);
-    // color: $tone0;
-    // font-size: 8em;
-    padding: 0;
-    font-weight: 200;
-    margin: 0 0 0.5em 0;
-    // text-transform: uppercase;
-    // letter-spacing: 0.1em;
+  .headline-mask {
+    overflow: hidden;
+    margin-bottom: 0.5em;
     @include breakpoint(medium up) {
       margin: 4vw 0 0.5em 0;
     }
-    animation: fadeIn 1.5s linear 3s 1 alternate both;
+  }
+  h1 {
+    color: darken($tone2, 10%);
+    // color: $tone1;
+    // font-size: 8em;
+    padding: 0;
+    font-weight: 200;
+    margin: 0;
+    line-height: 1;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
+
+    animation: slide-in-bottom 3s ease-in 0.25s 1 alternate both;
   }
   h2 {
     // font-size: 2.333em;
@@ -63,11 +71,13 @@ header {
       // top: 0;
       filter: blur(3px);
       opacity: 0.5;
-      transition: filter 0.33s linear, opacity 0.33s ease;
+      // color: $tone1;
+      transition: filter 0.33s linear, opacity 0.33s ease, color 0.25s ease;
       &.on {
         opacity: 1;
         filter: blur(0px);
         // animation-name: text-focus;
+        // color: $tone3;
         // animation-delay: 0;
         // animation-direction: normal;
         // animation-duration: 1s;
@@ -77,6 +87,7 @@ header {
         // animation-play-state: running;
       }
       &.off {
+
         // animation-name: text-focus-out;
         // animation-delay: 0;
         // animation-direction: normal;
