@@ -609,30 +609,31 @@ p {
   max-width: 42em; }
 
 a {
-  color: #f1ede4;
+  color: #77C9D4;
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 300;
-  font-size: 1.4em;
   line-height: 1.4;
   transition: color 0.5s ease, border 0.5s ease;
-  display: inline-block;
   margin-bottom: 0.2em;
   padding-bottom: 0.1em; }
   a:hover, a:focus {
-    color: #3db2c1; }
+    color: #f1ede4; }
 
 ul {
   list-style: none;
   padding: 0;
   margin-bottom: 2em; }
+  ul li {
+    font-size: 1.333em; }
 
 ul.horz-list li {
   display: inline-block; }
   ul.horz-list li a {
     border: none; }
 
-button, input[type='submit'], a {
+strong {
+  font-weight: 600; }
+
+button, input[type='submit'], a.button {
   background-color: transparent;
   border: none;
   display: inline-block;
@@ -641,14 +642,15 @@ button, input[type='submit'], a {
   line-height: 1.1;
   margin-bottom: 0.2em;
   font-family: "skolar-sans-latin", sans-serif;
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: 300;
   padding: 0 0 0.75em 0;
   color: #9ed8e0;
   transition: color 0.5s ease, letter-spacing 0.5s ease;
   position: relative;
-  overflow: hidden; }
-  button::after, input[type='submit']::after, a::after {
+  overflow: hidden;
+  letter-spacing: 0; }
+  button::after, input[type='submit']::after, a.button::after {
     content: '';
     display: block;
     position: relative;
@@ -658,10 +660,10 @@ button, input[type='submit'], a {
     width: 100%;
     background-color: #9ed8e0;
     transition: left 0.5s ease; }
-  button:hover, button:focus, input[type='submit']:hover, input[type='submit']:focus, a:hover, a:focus {
+  button:hover, button:focus, input[type='submit']:hover, input[type='submit']:focus, a.button:hover, a.button:focus {
     color: #f1ede4;
     letter-spacing: 0.01em; }
-    button:hover::after, button:focus::after, input[type='submit']:hover::after, input[type='submit']:focus::after, a:hover::after, a:focus::after {
+    button:hover::after, button:focus::after, input[type='submit']:hover::after, input[type='submit']:focus::after, a.button:hover::after, a.button:focus::after {
       left: 0; }
 
 @keyframes fadeInRight {
@@ -1321,7 +1323,9 @@ section.band {
 
 .half {
   background-color: #808A8C;
-  padding: 1.666em 2em 2em 2em; }
+  padding: 0 2em 2em 2em; }
+  .half:first-child {
+    padding: 1.666em 2em 1em 2em; }
   @media screen and (min-width: 48em) {
     .half {
       -ms-flex: 1 1 50vw;

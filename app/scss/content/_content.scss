@@ -23,7 +23,10 @@ position: relative;
   // width: 50vw;
   background-color: $tone0;
   // background: $tone0 url(../images/paper_texture.png) repeat center top;
-  padding: 1.666em 2em 2em 2em;
+  padding: 0 2em 2em 2em;
+  &:first-child {
+    padding: 1.666em 2em 1em 2em;
+  }
   @include breakpoint(medium up) {
     flex: 1 1 50vw;
     width: 50vw;
