@@ -601,6 +601,13 @@ h3 {
   font-family: "skolar-latin", serif;
   letter-spacing: 0.1333em; }
 
+h4 {
+  font-family: "skolar-latin", serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+  line-height: 1.185; }
+
 p {
   margin: 0 auto 1em auto;
   font-weight: 300;
@@ -1258,7 +1265,7 @@ button.hamburger {
       display: none; } }
 
 .info-container {
-  background: #77C9D4 url(../images/paper_texture.png) repeat center top;
+  background: #37a0ae url(../images/paper_texture.png) repeat center top;
   opacity: 0;
   color: #edd2aa;
   transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
@@ -1275,17 +1282,28 @@ button.hamburger {
     opacity: 1;
     left: 20vw; }
   .info-container h2 {
-    color: #2b7c87; }
+    color: #edd2aa;
+    margin-bottom: 0.666em; }
   .info-container p {
     color: #f1ede4;
     text-align: left;
     margin: 0 0 1em 0; }
+  .info-container a {
+    color: #c4e8ed;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease; }
+    .info-container a:hover {
+      color: #f1ede4; }
+  .info-container a.button {
+    text-decoration: none;
+    font-size: 1.666em; }
 
 .info-container__close {
   border-bottom: none;
   width: 100%;
   height: 2.75em;
-  background-color: #37a0ae;
+  background-color: #77C9D4;
   padding: 0.75em 0.75em 0.75em 1.5em;
   text-align: left;
   border: none;
@@ -1298,12 +1316,12 @@ button.hamburger {
     height: 1.25em; }
     .info-container__close svg path {
       transition: fill 0.5s ease;
-      fill: #77C9D4; }
+      fill: #808A8C; }
   .info-container__close:hover {
     height: 3em;
     padding-top: 0.9em; }
     .info-container__close:hover svg path {
-      fill: #edd2aa; }
+      fill: #677072; }
 
 .info-container__sub-container {
   padding: 2em; }
