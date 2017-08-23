@@ -1268,6 +1268,7 @@ button.hamburger {
   background: #37a0ae url(../images/paper_texture.png) repeat center top;
   opacity: 0;
   color: #edd2aa;
+  overflow-y: scroll;
   transition: opacity 0.5s ease, transform 0.4s ease-in, left 0.4s ease-in;
   position: fixed;
   top: 0;
