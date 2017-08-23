@@ -2,19 +2,109 @@
 
 $anim-height: 1.2em;
 $anim-width: 4.5em;
+// header {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: space-between;
+//   align-items: stretch;
+//   @include breakpoint(medium up) {
+//     flex-flow: row nowrap;
+//   }
+//   position: relative;
+// }
+
 header {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  @include breakpoint(medium up) {
-    flex-flow: row nowrap;
-  }
-  position: relative;
+  // background: $tone2 url(../images/Crumpled_sm.png) repeat center top;
+  background: $tone2 url(../images/FullPaper.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  // background-color: $tone2;
+  padding-bottom: 1.333em;
 }
 
+.masthead {
+  // flex: 1 1 auto;
+  text-align: center;
+  // background: $tone2;
+  padding: 2.25em 2em 1.75em 2em;
+  color: $text;
+  .headline-mask {
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    @include breakpoint(medium up) {
+      margin: 4vw 0 0.5em 0;
+    }
+  }
+  h1 {
+    color: darken($tone2, 10%);
+    // color: $tone1;
+    // font-size: 8em;
+    padding: 0;
+    font-weight: 200;
+    margin: 0;
+    line-height: 1;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
+
+    animation: slide-in-bottom 3s ease-in 0.25s 1 alternate both;
+  }
+  h2 {
+    // font-size: 2.333em;
+    // height: $anim-height;
+    color: $tone1;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    // text-transform: uppercase;
+    // letter-spacing: 0.1em;
+    // font-family: "skolar-latin",serif;
+  }
+
+  h2.swap {
+    position: relative;
+    font-weight: 300;
+    span {
+      // display: none;
+      display: inline-block;
+      // position: absolute;
+      // left: 2em;
+      // top: 0;
+      filter: blur(3px);
+      opacity: 0.5;
+      // color: $tone1;
+      transition: filter 0.33s linear, opacity 0.33s ease, color 0.25s ease;
+      &.on {
+        opacity: 1;
+        filter: blur(0px);
+        // animation-name: text-focus;
+        // color: $tone3;
+        // animation-delay: 0;
+        // animation-direction: normal;
+        // animation-duration: 1s;
+        // animation-fill-mode: forwards;
+        // animation-iteration-count: 1;
+        // animation-timing-function: ease;
+        // animation-play-state: running;
+      }
+      &.off {
+
+        // animation-name: text-focus-out;
+        // animation-delay: 0;
+        // animation-direction: normal;
+        // animation-duration: 1s;
+        // animation-fill-mode: forwards;
+        // animation-iteration-count: 1;
+        // animation-timing-function: ease;
+        // animation-play-state: running;
+      }
+    }
+  }
+
+}
+
+
 .paper {
-  background-color: $tone1;
+  background-color: transparent;
   // background-image: url(/images/LayeredPaperBall_reel_color.png);
   // background-size: 100%;
   // color: $tone2;
@@ -22,15 +112,16 @@ header {
   // height: 200px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
   // padding: 16px;
   div {
     transform-origin: top center;
     // transform: rotate(0);
-    // animation: wobble-hor-bottom 2s ease infinite alternate both;
+    animation: wobble-hor-bottom 2s ease infinite alternate both;
     img#doodle-holder {
       position: absolute;
       top: 0;
-      left: 32vw;
+      // left: 32vw;
       opacity: 0;
       padding: 1em;
       // transition: opacity 1s ease;
@@ -45,13 +136,33 @@ header {
     &:hover {
       // img {
         animation-play-state: paused;
-        cursor: default;
+        // cursor: default;
       // }
+    }
+  }
+  margin: 0 auto;
+  height: 42vw;
+  width: 42vw;
+  @include breakpoint (medium) {
+    height: 32vw;
+    width: 32vw;
+  }
+  @include breakpoint (large up) {
+    height: 22vw;
+    width: 22vw;
+  }
+  div {
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
     }
   }
 
   @include breakpoint(small) {
-    flex: 0 0 36vw;
+    // flex: 0 0 36vw;
     // position: absolute;
     // height: 100px;
     // width: 100px;
@@ -59,90 +170,22 @@ header {
     // right: 0;
     div {
       img {
-        position: absolute;
-        top: 0;
-        left: 32vw;
-        width: 36vw;
-        height: auto;
-        margin: 0 auto;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 36vw;
+        // height: auto;
+        // margin: 0 auto;
       }
     }
   }
   @include breakpoint(medium up) {
-    flex: 0 0 22vw;
-    height: 22vw;
-    width: 22vw;
+    // flex: 0 0 22vw;
+
     max-width: 200px;
     max-height: 200px;
     // position: static;
     flex-flow: row nowrap;
-    div {
-      img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0;
-        left: 0;
-      }
-    }
+
   }
 } // .paper
-
-.masthead {
-  flex: 1 1 auto;
-  background: $tone2;
-  padding: 2.25em 2em 1.75em 2em;
-  color: $text;
-  h1 {
-    color: $text;
-    padding: 0;
-    margin: 0 0 0.5em 0;
-    @include breakpoint(medium up) {
-      margin: 0;
-    }
-  }
-  h2 {
-    font-size: 2em;
-    height: $anim-height;
-    color: $tone1;
-    padding: 0;
-    margin: 0;
-  }
-
-  h2.swap {
-    position: relative;
-    span {
-      // display: none;
-      display: inline-block;
-      position: absolute;
-      left: 2em;
-      top: 0;
-      filter: blur(6px);
-      opacity: 0;
-      transition: filter 0.5s linear, opacity 0.75s ease;
-      &.on {
-        opacity: 1;
-        filter: blur(0px);
-        // animation-name: text-focus;
-        // animation-delay: 0;
-        // animation-direction: normal;
-        // animation-duration: 1s;
-        // animation-fill-mode: forwards;
-        // animation-iteration-count: 1;
-        // animation-timing-function: ease;
-        // animation-play-state: running;
-      }
-      &.off {
-        // animation-name: text-focus-out;
-        // animation-delay: 0;
-        // animation-direction: normal;
-        // animation-duration: 1s;
-        // animation-fill-mode: forwards;
-        // animation-iteration-count: 1;
-        // animation-timing-function: ease;
-        // animation-play-state: running;
-      }
-    }
-  }
-
-}

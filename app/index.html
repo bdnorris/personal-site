@@ -5,8 +5,23 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         <!-- <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,400i,500,600,700" rel="stylesheet"> -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet"> -->
         <script>
@@ -22,83 +37,142 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-      <header>
-        <div class="masthead">
-          <h1>Lorem Ipsum</h1>
-          <!-- <h2 class="morph">Web <dl><dt>Designer</dt><dt>Developer</dt></dl></h2> -->
-          <h2 class="swap">Web <span>Designer</span><span>Developer</span></h2>
+
+    <header>
+      <div class="masthead">
+        <div class="headline-mask">
+          <h1>Brian Norris</h1>
         </div>
-        <div class="paper" id="paper">
-          <div class="">
-            <img src="/images/LayeredPaperBall_reel_color.png" alt="" id="wrapper-img">
-            <img id="doodle-holder" src="" alt="doodle">
-          </div>
-        </div>
-      </header>
-
-      <section class="band bio">
-        <p>Massa ut pellentesque sit donec parturient. Et penatibus sed. Quis malesuada ad rhoncus sed ea ipsum pellentesque purus laoreet in ultricies. Nunc eget id viverra eget nulla aenean curabitur quam. Congue a feugiat. Commodo malesuada luctus. Imperdiet voluptatum euismod.</p>
-        <p>Suspendisse urna enim con pede praesent. Mauris nullam pede nonummy varius iaculis tellus tortor ipsum. Habitasse vivamus autem odio faucibus nec.</p>
-      </section>
-      <section class="band">
-        <h3>Experiments</h3>
-        <ul>
-          <li><button data-for="paper-balls" class="button info-launcher" type="button">Paper Balls</button></li>
-          <li><button data-for="scroll-detection" class="button info-launcher" type="button">Scroll Detection</button></li>
-        </ul>
-        <h3>Social</h3>
-        <ul class="horz-list social">
-          <li>
-            <a href="https://www.linkedin.com/in/brian-norris-b401ab37/" title="LinkedIn">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://codepen.io/bdnorris/" title="codepen">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero"/></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/bdnorris" title="github">
-              <svg aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-          </li>
-          <li>
-            <a id="obfuscated" href="bWFpbHRvOmJkbm9ycmlzQGdtYWlsLmNvbQ==">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712A.995.995 0 0 1 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288A.996.996 0 0 1 16 3z" fill-rule="evenodd"/></svg>
-            </a>
-          </li>
-        </ul>
-        <h3>Résumé</h3>
-        <ul>
-          <li><a href="#" target="_blank">Download Résumé [PDF]</a></li>
-        </ul>
-      </section>
-
-
-      <div class="info-container">
-        <button class="info-container__close">
-          <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><title>Close</title><path d="M5.657 4.243l2.828-2.829L7.071 0 4.243 2.828 1.414 0 0 1.414l2.828 2.829L0 7.07l1.414 1.414 2.829-2.828L7.07 8.485l1.414-1.414-2.828-2.828z" fill="#D8D8D8" fill-rule="evenodd"/></svg>        </button>
-        <div <cl></cl>ass="info-container__sub-container" data-key="off">
-
+        <!-- <h2 class="morph">Web <dl><dt>Designer</dt><dt>Developer</dt></dl></h2> -->
+        <h2>Web</h2>
+        <h2 class="swap"><span>Designer</span>/<span>Developer</span></h2>
+      </div>
+      <div class="paper" id="paper">
+        <div class="">
+          <img src="/images/LayeredPaperBall_reel_color.png" alt="" id="wrapper-img">
+          <img id="doodle-holder" src="" alt="doodle">
         </div>
       </div>
-      <div class="side-closer"> </div>
+    </header>
 
-      <ul>
-        <li class="info-element" data-subject="paper-balls">
+      <section class="band">
+
+        <div class="half">
+          <p><strong>Hi, I’m Brian Norris.</strong> I have 15 years experience working for advertising and media agencies as a graphic designer and web developer. I’m currently working as a UI Developer at <a href="https://marlinnetwork.com" target="_blank">The Marlin Network</a> in Southwest Missouri and instruct Web Design courses for design majors at <a href="https://art.missouristate.edu/" target="_blank">Missouri State University</a>.</p>
+          <p>I work with graphic designers, engineers, copywriters and user experience designers to deliver functional user experiences on the web. Find me through the various channels below, or take a look at some of my educational resources or my extra-curricular projects.</p>
+          <h3>Social</h3>
+          <ul class="horz-list social">
+            <li>
+              <a href="https://www.linkedin.com/in/brian-norris-b401ab37/" title="LinkedIn">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://codepen.io/bdnorris/" title="Codepen">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/bdnorris" title="GitHub">
+                <svg aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://keybase.io/bnorris" title="Keybase">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.965 14.247c0 .352-.285.636-.636.636-.35 0-.636-.284-.636-.636 0-.35.285-.636.635-.636.35 0 .635.287.635.637M10.91 14.247c0 .352-.285.636-.636.636s-.635-.284-.635-.636c0-.35.282-.636.633-.636s.636.287.636.637"/><path d="M13.937 8.142l-.104-.136c-.03-.04-.063-.078-.095-.117-.03-.04-.062-.075-.093-.112-.07-.08-.14-.16-.214-.24l-.05-.053-.06-.066-.09-.087c-.01-.012-.022-.023-.034-.035-.773-.76-1.67-1.325-2.637-1.67l-.154-.052c.008-.018.017-.036.024-.055.273-.71.245-1.482-.08-2.17-.327-.69-.904-1.2-1.626-1.44-.437-.144-.82-.213-1.14-.203-.022-.07-.067-.385.33-1.232L7.11 0l-.192.266c-.22.304-.432.597-.63.886-.218-.23-.51-.368-.83-.387l-.93-.058H4.52C4.498.705 4.473.705 4.45.705c-.66 0-1.206.514-1.247 1.17l-.058.935v.002c-.04.686.485 1.277 1.17 1.32l.668.04c-.044.56.048 1.08.27 1.537-.897.374-1.724.934-2.44 1.656C.61 9.594.61 12.034.61 13.996v1.183l.87-.924c.176.62.434 1.205.762 1.744h1.132c-.555-.743-.946-1.617-1.12-2.565L3.53 12.08l-.657 2.06 1.16-.844c2.05-1.49 4.496-1.834 7.273-1.02 1.204.355 2.374.026 2.982-.838l.07-.11c.06.332.093.665.093.997 0 1.042-.17 2.458-.92 3.675h1.074c.518-1.042.788-2.288.788-3.675 0-1.466-.524-2.947-1.455-4.183zM5.93 4.128c.082-.668.386-1.3.82-1.98.017.033.036.064.056.095.176.266.475.417.8.404.144-.005.404.017.822.155.476.158.857.496 1.072.95s.233.962.053 1.433c-.115.297-.303.547-.537.74l-.272-.335-.002-.002c-.186-.227-.462-.357-.755-.357-.224 0-.443.078-.617.22-.222.18-.342.44-.356.705-.8-.36-1.2-1.095-1.085-2.027zM8.8 7.534l-.346.283c-.03.024-.063.035-.097.035-.044 0-.088-.02-.118-.056l-.074-.09c-.055-.067-.045-.167.023-.223l.34-.28-.704-.866c-.072-.088-.06-.22.03-.29.038-.032.084-.048.13-.048.06 0 .12.025.16.075l1.975 2.43c.073.09.06.22-.028.29-.026.02-.055.035-.084.042-.016.004-.03.006-.047.006-.06 0-.118-.027-.16-.076l-.197-.243-.697.57c-.03.024-.066.036-.102.036-.046 0-.093-.02-.124-.06l-.317-.386c-.055-.068-.046-.168.023-.224l.7-.572-.285-.354zm-3.63-4.29l-.798-.05c-.17-.01-.3-.157-.29-.326l.06-.934c.01-.163.144-.29.307-.29h.017l.934.06c.082.004.158.04.212.102.055.062.082.14.077.224l-.005.067c-.214.378-.39.756-.516 1.146zm8.35 7.654c-.378.536-1.125.72-1.95.478-2.59-.76-4.93-.602-6.978.468l1.09-3.416-3.527 3.74C2.22 9.66 3.79 7.524 5.993 6.628c.314.248.69.44 1.116.56.106.03.214.05.32.068-.122.305-.08.665.14.938l.05.06c-.115.3-.07.65.147.916l.316.388c.178.217.44.342.72.342.214 0 .423-.075.59-.21l.19-.155c.116.05.245.076.378.076.075 0 .148-.007.22-.024.145-.033.283-.1.398-.194.416-.34.48-.956.14-1.373L9.605 6.65c.096-.078.187-.163.272-.254.09.025.18.052.267.08.177.064.355.132.53.21.67.297 1.302.733 1.847 1.265.02.02.04.037.057.056l.114.116c.025.026.05.053.073.08.054.057.107.117.16.178l.084.1c.03.035.058.07.087.107l.076.1c.026.034.053.068.078.103.558.766.658 1.553.27 2.105z"/><path d="M5.147 2.743L4.59 2.71l.035-.557.556.034z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a id="obfuscated" href="bWFpbHRvOmJkbm9ycmlzQGdtYWlsLmNvbQ==" title="Email">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712A.995.995 0 0 1 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288A.996.996 0 0 1 16 3z" fill-rule="evenodd"/></svg>
+              </a>
+            </li>
+          </ul>
+          <h3>Résumé</h3>
+          <ul>
+            <li><a href="norris-resume.pdf" target="_blank">Download Résumé [PDF]</a></li>
+          </ul>
+        </div>
+
+        <div class="half">
+
+          <h3>Experiments</h3>
+          <ul>
+            <li><button data-for="paper-balls" class="button info-launcher" type="button">Paper Balls</button></li>
+            <li><button data-for="scroll-detection" class="button info-launcher" type="button">Scroll Detection</button></li>
+            <li><button data-for="haiku" class="button info-launcher" type="button">Haiku Generator</button></li>
+          </ul>
+          <h3>Educational Resources</h3>
+          <ul>
+            <li><button data-for="des330" class="button info-launcher" type="button">Web Design for Design Majors</button></li>
+            <li><button data-for="des440" class="button info-launcher" type="button">Advanced Web Design for Design Majors</button></li>
+          </ul>
+
+        </div>
+
+
+        <div class="info-container">
+          <button class="info-container__close">
+            <svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><title>Close</title><path d="M5.657 4.243l2.828-2.829L7.071 0 4.243 2.828 1.414 0 0 1.414l2.828 2.829L0 7.07l1.414 1.414 2.829-2.828L7.07 8.485l1.414-1.414-2.828-2.828z" fill="#D8D8D8" fill-rule="evenodd"/></svg>        </button>
+          <div class="info-container__sub-container" data-key="off">
+
+          </div>
+        </div>
+        <!-- <div class="side-closer"> </div> -->
+      </section>
+
+      <!-- <ul> -->
+        <div class="info-element" data-subject="paper-balls">
           <div class="">
             <h2>Paper Balls</h2>
-            <p>paper balls and stuff</p>
+            <h4>Experimenting With Vue.js and My Obsession With Randomness</h4>
+            <p>I was sure I could create a &ldquo;stop-motion&rdquo; effect on the web fairly easily. So, after shooting the photos, I made a simple <a href="https://codepen.io/bdnorris/pen/oWmzpy" target="_blank">Codepen for the stop motion effect</a>.</p>
+            <p>I&rsquo;m also often thinking about how randomness, something trivially easy to create in code, can be used to make things that are in flux and unpredictable. Perhaps I&rsquo;m simply fascinated by it because so much of design is about putting everything in it&rsquo;s right place, it&rsquo;s hard to resist making things that are, at least within certain parameters, out of your control.</p>
+            <p>So, I started by writing <a href="https://codepen.io/bdnorris/pen/RVGwEB" target="_blank">this jQuery script to randomly move squares around the viewport</a>.
+            Then, wanting to learn a little more <a href="https://vuejs.org/" target="_blank">Vue.js</a>, and in particular, use the <a href="https://vuejs.org/v2/guide/installation.html#CLI" target="_blank">CLI</a>, I spun up a project and re-wrote it all in Vue.</p>
+            <a class="button" href="https://briannorris.io/paper-balls/" target="_blank">Launch Project</a>
           </div>
-        </li>
-        <li class="info-element" data-subject="scroll-detection">
+        </div>
+        <div class="info-element" data-subject="scroll-detection">
           <div class="">
             <h2>Scroll Detection</h2>
-            <p>scroll detection plugin</p>
+            <h4>The Educational Advantages of Writing it Yourself</h4>
+            <p>While working on the idea for the first student project in DES-440, it occurred to me that a very popular affect on the web right now is animating items as they come into the viewport, and it was likely I would be asked how this was done.</p>
+            <p>A popular library for this is <a href="https://wowjs.uk/" target="_blank">Wow.js</a>. But I thought it would be useful and educational to attempt to write my own. Currently the script has a number of nice features that still need documenting, and has not really been tested on a production site. I hope to not only use it in the wild soon, but properly document it so others can use it.</p>
+            <p>It&rsquo;s also dependent on jQuery. I&rsquo;d like to un-jQuery soon, making it even more lightweight.</p>
+            <a class="button" href="https://codepen.io/bdnorris/pen/GEQqYb" target="_blank">Here&rsquo;s the original Codepen</a><br>
+            <a class="button" href="https://github.com/bdnorris/scroll-detection-jquery-plugin" target="_blank">Here it is on GitHub</a>
           </div>
-        </li>
-      <ul>
+        </div>
+        <div class="info-element" data-subject="haiku">
+          <div class="">
+            <h2>Haiku Generator</h2>
+            <h4>Combining Silly Phrases, Randomness and Learning Meteor.js</h4>
+            <p>This project started when my friend <a href="http://www.joeyborovicka.com/" target="_blank">Joey</a> had compiled a list of haiku phrases in a Google Spreadsheet and asked if I could do anything interesting with it. <a href="https://github.com/bdnorris/haiku/" target="_blank">This was the result</a>.</p>
+            <p>Feeling like the idea had some legs, I thought it would be a good opportunity to learn a little <a href="https://www.meteor.com/" target="_blank">Meteor.js</a>. I created an app that would randomly pull five or seven syllable lines from a Mongo DB. Meteor made it trivially easy to add an administrative backend to enter new lines, or delete old ones.</p>
+            <a class="button" href="https://haiku-jb.herokuapp.com/" target="_blank">Launch Project</a>
+          </div>
+        </div>
+        <div class="info-element" data-subject="des330">
+          <div class="">
+            <h2>DES-330</h2>
+            <h4>Web Design for Design Majors</h4>
+            <p>Developed for Graphic Design and Illustration majors who have no prior experience building websites, this course serves as an introduction to modern web design and development techniques.</p>
+            <p>A course website was developed during in-class demos and used to store all course materials.</p>
+            <p>Assignments originated by <a href="https://www.linkedin.com/in/jessenivens/" target="_blank">Jesse Nivens</a></p>
+            <a class="button" href="https://bdnorris.github.io/des-330-site/" target="_blank">Course Website</a>
+          </div>
+        </div>
+        <div class="info-element" data-subject="des440">
+          <div class="">
+            <h2>DES-440</h2>
+            <h4>Advanced Web Design for Design Majors</h4>
+            <p><strong>Currently in progress!</strong> Designed as a continuation of DES-330, this course offers more in-depth project work.</p>
+            <p>All materials are available on the course website.</p>
+            <a class="button" href="https://msuweb.design" target="_blank">Course Website</a>
+          </div>
+        </div>
+      <!-- <ul> -->
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>

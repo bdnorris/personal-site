@@ -5,31 +5,31 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size:   48px;
+  font-size:   16vw;
   line-height: 1.185; // unit-less line-height to keep it flexible
   font-weight: 400; // Roman/Regular
   margin: 0 0 0.8rem 0; // 1rem for 16pt
-  font-family: "skolar-latin",serif;
+  font-family: "skolar-latin", serif;
   font-weight: 600;
   line-height: 0.9;
   @include breakpoint(medium) {
-    font-size: 68px;
+    // font-size: 6em;
   }
   @include breakpoint(large up) {
-    font-size: 86px;
+    font-size: 8em;
   }
 }
 
 h2 {
-  font-size:   22px;
+  font-size:   6vw;
   line-height: 1.185;
   font-weight: 400; // Roman/Regular
   margin: 0.333em 0;
   @include breakpoint(medium) {
-    font-size: 36px;
+    // font-size: 36px;
   }
   @include breakpoint(large up) {
-    font-size: 48px;
+    font-size: 38px;
   }
 }
 
@@ -38,10 +38,21 @@ h3 {
   font-weight: 600; // Roman/Regular
   margin: 0 0 0.25em 0;
   line-height: 1.185;
+  text-transform: uppercase;
+  font-family: "skolar-latin", serif;
+  letter-spacing: 0.1333em;
+}
+
+h4 {
+  font-family: "skolar-latin", serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+  line-height: 1.185;
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 auto 1em auto;
   font-weight: 300; // light
   font-size:   1.333em;
   line-height: 1.5;
@@ -55,20 +66,19 @@ p {
 }
 
 a {
-  color: $text;
+  color: $tone3;
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 300;
-  font-size: 1.4em;
+  // font-weight: 300;
   line-height: 1.4;
   transition: color 0.5s ease, border 0.5s ease;
-  display: inline-block;
+  // display: inline-block;
   margin-bottom: 0.2em;
-  border-bottom: 1px dashed transparent;
+  // font-weight: 600;
+  // border-bottom: 1px dashed transparent;
   padding-bottom: 0.1em;
   &:hover, &:focus {
-    color: darken($tone3, 15%);
-    border-bottom: 1px dashed darken($tone3, 15%);
+    color: $text;
+    // border-bottom: 1px dashed darken($tone3, 15%);
   }
 }
 
@@ -76,6 +86,9 @@ ul {
   list-style: none;
   padding: 0;
   margin-bottom: 2em;
+  li {
+    font-size: 1.333em;
+  }
 }
 
 ul.horz-list {
@@ -85,4 +98,9 @@ ul.horz-list {
       border: none;
     }
   }
+}
+
+
+strong {
+  font-weight: 600;
 }

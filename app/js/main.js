@@ -26,8 +26,8 @@ infoElement.prototype = {
   },
   change: function(selector, key) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
-    let prevKey = $(selector).children('.info-container__sub-container').attr('data-key');
-    let open = false;
+    var prevKey = $(selector).children('.info-container__sub-container').attr('data-key');
+    var open = false;
     if (prevKey != NaN) {
       open = true;
     }
@@ -37,7 +37,7 @@ infoElement.prototype = {
     }
     console.log(prevKey)
     console.log('change')
-    let content = this.content;
+    var content = this.content;
     $(selector).children('.info-container__sub-container')
       .animate({opacity: 0}, 300, function(){
         $(selector).children('.info-container__sub-container').html(content);
@@ -61,9 +61,22 @@ var randomDoodles = [
   'web.png'
 ];
 
-for (let i = 0; i <= randomDoodles.length; i++) {
+for (var i = 0; i < randomDoodles.length; i++) {
     $('body').append('<img src="/images/doodles/'+randomDoodles[i]+'" style="display:none;">');
 }
+
+// var images = new Array();
+// function preload() {
+// 	for (let i = 0; i < preload.arguments.length; i++) {
+// 		images[i] = new Image()
+// 		images[i].src = preload.arguments[i]
+// 	}
+// }
+//
+//   for (let i = 0; i < randomDoodles.length; i++) {
+//     preload('/images/doodles/'+randomDoodles[i]);
+//   }
+
 
 //  paper element
 var element = document.getElementById('paper');
@@ -97,21 +110,21 @@ var elementImg = document.getElementById('wrapper-img');
 //   // }
 // };
 var findRandomDoodle = function () {
-  let max = randomDoodles.length;
+  var max = randomDoodles.length;
   // console.log("max: "+max);
-  let min = 1;
+  var min = 1;
   // console.log("min: "+min);
-  let rand = Math.floor(Math.random() * (max - min)) + min;
+  var rand = Math.floor(Math.random() * (max - min)) + min;
   // console.log("rand: "+rand);
   return randomDoodles[rand];
 }
 
 var wrapImg = function (direction, element, frameHeight) {
-  let numFrames = 5;
-  let currframeHeight = frameHeight // pixels
-  let newFrameHeight = '';
+  var numFrames = 5;
+  var currframeHeight = frameHeight // pixels
+  var newFrameHeight = '';
   if (direction === 'forwards') {
-    let doodle = findRandomDoodle();
+    var doodle = findRandomDoodle();
     newFrameHeight = 0;
     $('#doodle-holder').attr('src', '/images/doodles/' + doodle).addClass('on');
   } else {
@@ -119,7 +132,7 @@ var wrapImg = function (direction, element, frameHeight) {
     newFrameHeight = (0 - currframeHeight * numFrames);
     $('#doodle-holder').attr('src', '').removeClass('on');
   }
-  for (let i = 0; i <= numFrames; i++) {
+  for (var i = 0; i <= numFrames; i++) {
     // (function(i){
     // console.log('wrap function running');
     window.setTimeout(function () {
@@ -140,12 +153,10 @@ var wrapImg = function (direction, element, frameHeight) {
 
 
 
-
-
 $(document).ready(function(){
 
   $("[data-subject]").each(function(index, element) {
-    let newInfoElement = new infoElement(element);
+    var newInfoElement = new infoElement(element);
     infoElements.push(newInfoElement);
   });
 
@@ -153,9 +164,9 @@ $(document).ready(function(){
 
   $(document).on('click', '.info-launcher', function(){
     var infoLabel = $(this).data('for');
-    let prevKey = $('.info-container__sub-container').attr('data-key');
+    var prevKey = $('.info-container__sub-container').attr('data-key');
     // prevKey = parseInt(prevKey, 10)
-    let open = false;
+    var open = false;
     // debugger;
     if (prevKey != 'off') {
       open = true;
@@ -174,7 +185,7 @@ $(document).ready(function(){
     }
   });
 
-  $('body').on('click', '.info-container__close, .side-closer', function() {
+  $('body').on('click', '.info-container__close', function() {
     for (var i = 0, count = infoElements.length ; i < count ; i++) {
       // if (infoLabel === infoElements[i].label) {
         infoElements[i].close('.info-container');
@@ -208,19 +219,30 @@ $(document).ready(function(){
   //   wrap('reverse', element, frameHeight);
   // });
 
-  $(document).on('mouseover', '#paper', function() {
-    var frameHeight = $('#paper').height();
-    // let style = window.getComputedStyle(elementImg, null);
-    // let frameHeight = style.getPropertyValue("height");
-    console.log('mouseover');
-    wrapImg('forwards', elementImg, frameHeight);
-  });
-  $(document).on('mouseout', '#paper', function() {
-    var frameHeight = $('#paper').height();
-    // let style = window.getComputedStyle(elementImg, null);
-    // let frameHeight = style.getPropertyValue("height");
-    wrapImg('reverse', elementImg, frameHeight);
-  });
+  // $(document).on('mouseover', '#paper', function() {
+  //   var frameHeight = $('#paper').height();
+  //   // let style = window.getComputedStyle(elementImg, null);
+  //   // let frameHeight = style.getPropertyValue("height");
+  //   // console.log('mouseover');
+  //   wrapImg('forwards', elementImg, frameHeight);
+  // });
+  // $(document).on('mouseout', '#paper', function() {
+  //   var frameHeight = $('#paper').height();
+  //   // let style = window.getComputedStyle(elementImg, null);
+  //   // let frameHeight = style.getPropertyValue("height");
+  //   wrapImg('reverse', elementImg, frameHeight);
+  // });
+  $('body').on('click', '#paper', function() {
+      var frameHeight = $('#paper').height();
+      $(this).toggleClass('clicked');
+      if ($(this).hasClass('clicked')) {
+        wrapImg('forwards', elementImg, frameHeight);
+      }
+      else {
+        wrapImg('reverse', elementImg, frameHeight);
+      }
+    }
+  );
 
   var mailLink = $('#obfuscated').attr('href');
   mailLink = atob(mailLink);
