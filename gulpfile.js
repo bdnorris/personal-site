@@ -73,11 +73,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/images'))
 });
 
-// Copying fonts
-// gulp.task('fonts', function() {
-//   return gulp.src('app/fonts/**/*')
-//     .pipe(gulp.dest('dist/fonts'))
-// })
+// Copying scripts
+gulp.task('scripts', function() {
+  return gulp.src('app/js/**/*')
+    .pipe(gulp.dest('dist/js'))
+})
 
 // Cleaning
 gulp.task('clean', function() {
@@ -104,7 +104,7 @@ gulp.task('build', function(callback) {
     'clean:dist',
     'sass',
     // ['useref', 'images', 'fonts'],
-    ['useref', 'images'],
+    ['useref', 'images', 'scripts'],
     callback
   )
 })
