@@ -642,6 +642,7 @@ strong {
 
 button, input[type='submit'], a.button {
   background-color: transparent;
+  border-radius: 0;
   border: none;
   outline: none;
   display: inline-block;
@@ -1003,8 +1004,7 @@ header {
     padding: 0;
     font-weight: 200;
     margin: 0;
-    line-height: 1;
-    animation: slide-in-bottom 3s ease-in 0.25s 1 alternate both; }
+    line-height: 1; }
   .masthead h2 {
     color: #edd2aa;
     padding: 0;
