@@ -12,11 +12,6 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-// Basic Gulp task syntax
-gulp.task('hello', function() {
-  console.log('Hello Zell!');
-})
-
 // Development Tasks
 // -----------------
 
@@ -24,8 +19,9 @@ gulp.task('hello', function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app'
-    }
+      baseDir: 'app',
+    },
+    browser: 'firefox'
   })
 })
 
@@ -44,7 +40,7 @@ gulp.task('sass', function() {
 })
 
 // Watchers
-gulp.task('watch', ['browserSync', 'sass'], function() {
+gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
