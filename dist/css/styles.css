@@ -987,7 +987,7 @@ header {
   background: #DB9075 url(../images/FullPaper.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 1.333em; }
+  padding-bottom: 12em; }
 
 .masthead {
   text-align: center;
@@ -1010,15 +1010,15 @@ header {
     padding: 0;
     margin: 0;
     font-weight: 700; }
-  .masthead h2.swap {
+  .masthead h2.morph {
     position: relative;
     font-weight: 300; }
-    .masthead h2.swap span {
+    .masthead h2.morph span {
       display: inline-block;
       filter: blur(3px);
       opacity: 0.5;
       transition: filter 0.33s linear, opacity 0.33s ease, color 0.25s ease; }
-      .masthead h2.swap span.on {
+      .masthead h2.morph span.on {
         opacity: 1;
         filter: blur(0px); }
 
@@ -1026,10 +1026,17 @@ header {
   background-color: transparent;
   overflow: hidden;
   position: relative;
+  position: absolute;
   cursor: pointer;
   margin: 0 auto;
   height: 42vw;
   width: 42vw; }
+  .paper:nth-child(1) {
+    left: 10vw;
+    top: 12vw; }
+  .paper:nth-child(2) {
+    right: 10vw;
+    top: 12vw; }
   .paper div {
     transform-origin: top center;
     animation: wobble-hor-bottom 2s ease infinite alternate both; }
