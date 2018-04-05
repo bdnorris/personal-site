@@ -118,6 +118,7 @@ var findRandomDoodle = function () {
 }
 
 var wrapImg = function (direction, element, frameHeight) {
+  console.log(element);
   var numFrames = 5;
   var currframeHeight = frameHeight // pixels
   var newFrameHeight = '';
@@ -239,9 +240,9 @@ $(document).ready(function(){
 
   $('body').on('click', '.paper', function(e) {
       var frameHeight = $(this).height();
-      console.log(e);
+      // console.log(e);
       // var element = document.getElementsByClassName('paper');
-      var elementImg = e.target;
+      var elementImg = e.currentTarget.children[0].firstElementChild;
 
       $(this).toggleClass('clicked');
       if ($(this).hasClass('clicked')) {

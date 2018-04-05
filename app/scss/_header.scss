@@ -128,7 +128,7 @@ header {
     transform-origin: top center;
     // transform: rotate(0);
     animation: wobble-hor-bottom 2s ease infinite alternate both;
-    img#doodle-holder {
+    img.doodle-holder {
       position: absolute;
       top: 0;
       // left: 32vw;
