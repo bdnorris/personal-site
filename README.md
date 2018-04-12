@@ -1,7 +1,9 @@
-personal-site
+## Personal landing page. 
 
-In progress
+https://briannorris.io
 
-gulp watch
+### HTML/Sass with Browsersync.
 
-gulp build
+`gulp watch`
+
+`gulp build`

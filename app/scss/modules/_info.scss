@@ -4,7 +4,7 @@
 
 .info-container {
   // background-color: $tone3;
-  background: darken($tone3, 20%) url(../images/paper_texture.png) repeat center top;
+  background: darken($tone3, 20%) url(../images/BlueBG.png) repeat center top;
   // display: none;
   opacity: 0;
   color: $tone1;
@@ -59,7 +59,7 @@
     color: lighten($tone3, 20%);
     text-decoration: underline;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     &:hover {
       color: $text;
     }

@@ -15,7 +15,8 @@ $anim-width: 4.5em;
 
 header {
   // background: $tone2 url(../images/Crumpled_sm.png) repeat center top;
-  background: $tone2 url(../images/FullPaper.jpg) no-repeat center center;
+  // background: $tone2 url(../images/FullPaper.jpg) no-repeat center center;
+  background: $tone2 url('../images/lithoBG.png') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   // background-color: $tone2;

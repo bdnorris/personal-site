@@ -984,7 +984,7 @@ input.error-input {
       padding: 32px; } }
 
 header {
-  background: #DB9075 url(../images/FullPaper.jpg) no-repeat center center;
+  background: #DB9075 url("../images/lithoBG.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 42vw;
@@ -1282,7 +1282,7 @@ button.hamburger {
       display: none; } }
 
 .info-container {
-  background: #37a0ae url(../images/paper_texture.png) repeat center top;
+  background: #37a0ae url(../images/BlueBG.png) repeat center top;
   opacity: 0;
   color: #edd2aa;
   overflow-y: scroll;
@@ -1310,7 +1310,7 @@ button.hamburger {
     color: #c4e8ed;
     text-decoration: underline;
     font-weight: 600;
-    transition: color 0.3s ease; }
+    transition: all 0.3s ease; }
     .info-container a:hover {
       color: #f1ede4; }
   .info-container a.button {
