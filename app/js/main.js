@@ -16,13 +16,13 @@ infoElement.prototype = {
   launch: function(selector, key) {
     $(selector).addClass('on').children('.info-container__sub-container').html(this.content).addClass('has-content').attr('data-key', key);
     this.open = true;
-    console.log('launch')
+    // console.log('launch')
   },
   close: function(selector) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
     console.log('close')
     $(selector).removeClass('on').children('.info-container__sub-container').html('').removeClass('has-content').attr('data-key', 'off');
-    this.open = false;
+    // this.open = false;
   },
   change: function(selector, key) {
     // $(selector).css('opacity', '0').children('.info-container__sub-container').html('');
@@ -35,8 +35,8 @@ infoElement.prototype = {
       prevKey = parseInt(prevKey, 10)
       infoElements[prevKey].open = false;
     }
-    console.log(prevKey)
-    console.log('change')
+    // console.log(prevKey)
+    // console.log('change')
     var content = this.content;
     $(selector).children('.info-container__sub-container')
       .animate({opacity: 0}, 300, function(){
@@ -78,9 +78,7 @@ for (var i = 0; i < randomDoodles.length; i++) {
 //   }
 
 
-//  paper element
-var element = document.getElementById('paper');
-var elementImg = document.getElementById('wrapper-img');
+
 
 // var wrap = function (direction, element, frameHeight) {
 //   let numFrames = 5;
@@ -120,17 +118,20 @@ var findRandomDoodle = function () {
 }
 
 var wrapImg = function (direction, element, frameHeight) {
+  console.log(element);
   var numFrames = 5;
   var currframeHeight = frameHeight // pixels
   var newFrameHeight = '';
+  var doodleHolder = $(element).siblings('.doodle-holder');
+  // console.log(doodleHolder);
   if (direction === 'forwards') {
     var doodle = findRandomDoodle();
     newFrameHeight = 0;
-    $('#doodle-holder').attr('src', '/images/doodles/' + doodle).addClass('on');
+    $(doodleHolder).attr('src', '/images/doodles/' + doodle).addClass('on');
   } else {
     // numFrames = numFrames - 1;
     newFrameHeight = (0 - currframeHeight * numFrames);
-    $('#doodle-holder').attr('src', '').removeClass('on');
+    $(doodleHolder).attr('src', '').removeClass('on');
   }
   for (var i = 0; i <= numFrames; i++) {
     // (function(i){
@@ -160,7 +161,7 @@ $(document).ready(function(){
     infoElements.push(newInfoElement);
   });
 
-  console.dir(infoElements);
+  // console.dir(infoElements);
 
   $(document).on('click', '.info-launcher', function(){
     var infoLabel = $(this).data('for');
@@ -232,8 +233,17 @@ $(document).ready(function(){
   //   // let frameHeight = style.getPropertyValue("height");
   //   wrapImg('reverse', elementImg, frameHeight);
   // });
-  $('body').on('click', '#paper', function() {
-      var frameHeight = $('#paper').height();
+
+  //  paper element
+
+
+
+  $('body').on('click', '.paper', function(e) {
+      var frameHeight = $(this).height();
+      // console.log(e);
+      // var element = document.getElementsByClassName('paper');
+      var elementImg = e.currentTarget.children[0].firstElementChild;
+
       $(this).toggleClass('clicked');
       if ($(this).hasClass('clicked')) {
         wrapImg('forwards', elementImg, frameHeight);
