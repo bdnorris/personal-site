@@ -987,7 +987,11 @@ header {
   background: #DB9075 url(../images/FullPaper.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 12em; }
+  padding-bottom: 42vw;
+  position: relative; }
+  @media screen and (min-width: 48em) {
+    header {
+      padding-bottom: 14em; } }
 
 .masthead {
   text-align: center;
@@ -1028,15 +1032,20 @@ header {
   position: relative;
   position: absolute;
   cursor: pointer;
+  display: none;
   margin: 0 auto;
-  height: 42vw;
-  width: 42vw; }
-  .paper:nth-child(1) {
-    left: 10vw;
-    top: 12vw; }
+  height: 36vw;
+  width: 36vw; }
+  @media screen and (min-width: 67.5em) {
+    .paper {
+      display: block; } }
   .paper:nth-child(2) {
-    right: 10vw;
-    top: 12vw; }
+    left: calc(50vw - 18vw);
+    bottom: 2em;
+    display: block; }
+    @media screen and (min-width: 48em) {
+      .paper:nth-child(2) {
+        left: calc(50vw - 100px); } }
   .paper div {
     transform-origin: top center;
     animation: wobble-hor-bottom 2s ease infinite alternate both; }

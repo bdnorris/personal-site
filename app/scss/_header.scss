@@ -20,7 +20,11 @@ header {
   background-attachment: fixed;
   // background-color: $tone2;
   // padding-bottom: 1.333em;
-  padding-bottom: 12em;
+  padding-bottom: 42vw;
+  position: relative;
+  @include breakpoint(medium up) {
+    padding-bottom: 14em;
+  }
 }
 
 .masthead {
@@ -77,15 +81,6 @@ header {
       &.on {
         opacity: 1;
         filter: blur(0px);
-        // animation-name: text-focus;
-        // color: $tone3;
-        // animation-delay: 0;
-        // animation-direction: normal;
-        // animation-duration: 1s;
-        // animation-fill-mode: forwards;
-        // animation-iteration-count: 1;
-        // animation-timing-function: ease;
-        // animation-play-state: running;
       }
       &.off {
 
@@ -106,24 +101,39 @@ header {
 
 .paper {
   background-color: transparent;
-  // background-image: url(/images/LayeredPaperBall_reel_color.png);
-  // background-size: 100%;
-  // color: $tone2;
-  // width: 200px;
-  // height: 200px;
   overflow: hidden;
   position: relative;
   position: absolute;
   cursor: pointer;
   // padding: 16px;
-  &:nth-child(1) {
-    left: 10vw;
-    top: 12vw;
+  display: none;
+  @include breakpoint(large up) {
+    display: block;
   }
   &:nth-child(2) {
-    right: 10vw;
-    top: 12vw;
+    left: calc(50vw - 18vw);
+    bottom: 2em;
+    display: block;
+    @include breakpoint(medium up) {
+      left: calc(50vw - 100px)
+    }
   }
+  // &:nth-child(3) {
+  //   left: 9vw;
+  //   top: 2vw;
+  // }
+  // &:nth-child(4) {
+  //   right: 12vw;
+  //   top: 10vw;
+  // }
+  // &:nth-child(5) {
+  //   right: 3vw;
+  //   bottom: 2vw;
+  // }
+  // &:nth-child(6) {
+  //   left: 3vw;
+  //   bottom: 8vw;
+  // }
   div {
     transform-origin: top center;
     // transform: rotate(0);
@@ -151,8 +161,8 @@ header {
     }
   }
   margin: 0 auto;
-  height: 42vw;
-  width: 42vw;
+  height: 36vw;
+  width: 36vw;
   @include breakpoint (medium) {
     height: 32vw;
     width: 32vw;
