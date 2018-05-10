@@ -34,7 +34,8 @@ gulp.task('sass', function() {
     })) // autoprefixer
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
-      stream: true
+      stream: true,
+      browser: "firefox"
     }))
     .pipe(gulp.dest('dist/css'));
 })
