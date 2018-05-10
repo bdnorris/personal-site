@@ -983,14 +983,16 @@ input.error-input {
     .stage {
       padding: 32px; } }
 
-header {
+.header {
   background: #DB9075 url("../images/lithoBG.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  width: 50vw;
+  height: 100vw;
   padding-bottom: 42vw;
   position: relative; }
   @media screen and (min-width: 48em) {
-    header {
+    .header {
       padding-bottom: 14em; } }
 
 .masthead {
@@ -1357,22 +1359,28 @@ section.band {
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; } }
 
-.half {
+.site-wrapper {
+  display: -ms-flexbox;
+  display: flex; }
+
+.content-area {
+  width: 50vw;
+  height: 100vw;
   background-color: #808A8C;
   padding: 0 2em 2em 2em; }
-  .half:first-child {
+  .content-area:first-child {
     padding: 1.666em 2em 1em 2em; }
   @media screen and (min-width: 48em) {
-    .half {
+    .content-area {
       -ms-flex: 1 1 50vw;
       flex: 1 1 50vw;
       width: 50vw;
       background-color: #808A8C;
       padding: 2.666em 2em 2em 2em; }
-      .half:first-child {
+      .content-area:first-child {
         -ms-flex-order: 2;
         order: 2; }
-      .half:last-child {
+      .content-area:last-child {
         -ms-flex-order: 1;
         order: 1; } }
 

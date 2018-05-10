@@ -2,18 +2,8 @@
 
 $anim-height: 1.2em;
 $anim-width: 4.5em;
-// header {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   justify-content: space-between;
-//   align-items: stretch;
-//   @include breakpoint(medium up) {
-//     flex-flow: row nowrap;
-//   }
-//   position: relative;
-// }
 
-header {
+.header {
   // background: $tone2 url(../images/Crumpled_sm.png) repeat center top;
   // background: $tone2 url(../images/FullPaper.jpg) no-repeat center center;
   background: $tone2 url('../images/lithoBG.png') no-repeat center center;
@@ -21,6 +11,8 @@ header {
   background-attachment: fixed;
   // background-color: $tone2;
   // padding-bottom: 1.333em;
+  width: 50vw;
+  height: 100vw;
   padding-bottom: 42vw;
   position: relative;
   @include breakpoint(medium up) {

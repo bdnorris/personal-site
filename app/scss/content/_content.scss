@@ -18,9 +18,14 @@ position: relative;
 //   }
 // }
 
-.half {
+.site-wrapper {
+  display: flex;
+}
+
+.content-area {
   // flex: 1 1 50vw;
-  // width: 50vw;
+  width: 50vw;
+  height: 100vw;
   background-color: $tone0;
   // background: $tone0 url(../images/paper_texture.png) repeat center top;
   padding: 0 2em 2em 2em;
