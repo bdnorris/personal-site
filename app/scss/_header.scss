@@ -22,7 +22,7 @@ $anim-width: 4.5em;
 
 .masthead {
   // flex: 1 1 auto;
-  text-align: center;
+  // text-align: center;
   // background: $tone2;
   padding: 2.25em 2em 1.75em 2em;
   color: $text;
@@ -37,10 +37,12 @@ $anim-width: 4.5em;
     color: darken($tone2, 10%);
     // color: $tone1;
     // font-size: 8em;
+    // font-family: 'Rakkas', cursive;
     padding: 0;
     font-weight: 200;
     margin: 0;
     line-height: 1;
+    text-align: left;
     // text-transform: uppercase;
     // letter-spacing: 0.1em;
 
@@ -53,6 +55,7 @@ $anim-width: 4.5em;
     padding: 0;
     margin: 0;
     font-weight: 700;
+    font-family: 'Rakkas', cursive;
     // text-transform: uppercase;
     // letter-spacing: 0.1em;
     // font-family: "skolar-latin",serif;

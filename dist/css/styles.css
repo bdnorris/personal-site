@@ -996,7 +996,6 @@ input.error-input {
       padding-bottom: 14em; } }
 
 .masthead {
-  text-align: center;
   padding: 2.25em 2em 1.75em 2em;
   color: #f1ede4; }
   .masthead .headline-mask {
@@ -1010,12 +1009,14 @@ input.error-input {
     padding: 0;
     font-weight: 200;
     margin: 0;
-    line-height: 1; }
+    line-height: 1;
+    text-align: left; }
   .masthead h2 {
     color: #edd2aa;
     padding: 0;
     margin: 0;
-    font-weight: 700; }
+    font-weight: 700;
+    font-family: 'Rakkas', cursive; }
   .masthead h2.morph {
     position: relative;
     font-weight: 300; }
